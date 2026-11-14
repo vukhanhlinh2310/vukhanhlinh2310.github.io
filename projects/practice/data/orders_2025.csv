@@ -1,0 +1,151 @@
+order_id,engine_family,segment,planned_sol,actual_sol,planned_rts,actual_rts,delay_days,delay_cause,rts_on_time,sol_on_time
+EO-25000,12-cyl V,Power generation,2025-07-09,2025-07-09,2025-09-03,2025-09-03,0,On time,True,True
+EO-25001,8-cyl inline,Oil & Gas,2025-08-27,2025-09-19,2025-10-10,2025-11-17,38,Engineering change,False,False
+EO-25002,12-cyl V,Marine,2025-08-15,2025-08-15,2025-10-10,2025-10-10,0,On time,True,True
+EO-25003,12-cyl V,Power generation,2025-02-15,2025-02-15,2025-04-12,2025-04-12,0,On time,True,True
+EO-25004,6-cyl inline,Marine,2025-09-10,2025-09-10,2025-10-19,2025-10-19,0,On time,True,True
+EO-25005,16-cyl V,Power generation,2025-06-15,2025-06-15,2025-08-18,2025-08-18,0,On time,True,True
+EO-25006,12-cyl V,Marine,2025-04-12,2025-04-12,2025-06-07,2025-06-11,4,Customer change,False,True
+EO-25007,12-cyl V,Power generation,2025-06-09,2025-06-11,2025-08-04,2025-08-07,3,Material shortage,False,True
+EO-25008,6-cyl inline,Power generation,2025-10-23,2025-10-23,2025-12-01,2025-12-01,0,On time,True,True
+EO-25009,8-cyl inline,Power generation,2025-09-20,2025-09-20,2025-11-03,2025-11-03,0,On time,True,True
+EO-25010,8-cyl inline,Marine,2025-09-13,2025-09-13,2025-10-27,2025-11-01,5,Quality rework,False,True
+EO-25011,16-cyl V,Oil & Gas,2025-05-24,2025-06-01,2025-07-27,2025-08-09,13,Material shortage,False,False
+EO-25012,8-cyl inline,Marine,2025-08-29,2025-08-29,2025-10-12,2025-10-21,9,Customer change,False,True
+EO-25013,12-cyl V,Marine,2025-05-01,2025-05-01,2025-06-26,2025-06-26,0,On time,True,True
+EO-25014,8-cyl inline,Power generation,2025-07-30,2025-07-30,2025-09-12,2025-09-21,9,Test bench capacity,False,True
+EO-25015,6-cyl inline,Marine,2025-07-16,2025-07-16,2025-08-24,2025-08-24,0,On time,True,True
+EO-25016,8-cyl inline,Power generation,2025-03-21,2025-03-21,2025-05-04,2025-05-04,0,On time,True,True
+EO-25017,6-cyl inline,Power generation,2025-03-26,2025-03-26,2025-05-04,2025-05-04,0,On time,True,True
+EO-25018,12-cyl V,Marine,2025-01-24,2025-01-24,2025-03-21,2025-03-21,0,On time,True,True
+EO-25019,8-cyl inline,Oil & Gas,2025-02-16,2025-02-16,2025-04-01,2025-04-01,0,On time,True,True
+EO-25020,12-cyl V,Marine,2025-05-16,2025-05-16,2025-07-11,2025-07-11,0,On time,True,True
+EO-25021,8-cyl inline,Marine,2025-05-29,2025-05-29,2025-07-12,2025-07-15,3,Test bench capacity,False,True
+EO-25022,16-cyl V,Marine,2025-02-24,2025-02-24,2025-04-29,2025-04-29,0,On time,True,True
+EO-25023,16-cyl V,Oil & Gas,2025-05-11,2025-05-11,2025-07-14,2025-07-14,0,On time,True,True
+EO-25024,12-cyl V,Marine,2025-07-06,2025-07-06,2025-08-31,2025-08-31,0,On time,True,True
+EO-25025,6-cyl inline,Marine,2025-03-16,2025-03-16,2025-04-24,2025-04-24,0,On time,True,True
+EO-25026,8-cyl inline,Marine,2025-04-17,2025-04-30,2025-05-31,2025-06-22,22,Engineering change,False,False
+EO-25027,6-cyl inline,Oil & Gas,2025-04-26,2025-04-26,2025-06-04,2025-06-16,12,Test bench capacity,False,True
+EO-25028,6-cyl inline,Oil & Gas,2025-06-06,2025-06-06,2025-07-15,2025-07-15,0,On time,True,True
+EO-25029,12-cyl V,Power generation,2025-04-25,2025-04-25,2025-06-20,2025-07-01,11,Quality rework,False,True
+EO-25030,12-cyl V,Oil & Gas,2025-08-15,2025-08-15,2025-10-10,2025-10-16,6,Test bench capacity,False,True
+EO-25031,16-cyl V,Oil & Gas,2025-04-14,2025-04-14,2025-06-17,2025-06-17,0,On time,True,True
+EO-25032,6-cyl inline,Marine,2025-05-16,2025-05-16,2025-06-24,2025-06-28,4,Test bench capacity,False,True
+EO-25033,8-cyl inline,Marine,2025-04-29,2025-04-29,2025-06-12,2025-06-12,0,On time,True,True
+EO-25034,8-cyl inline,Power generation,2025-03-01,2025-03-01,2025-04-14,2025-04-17,3,Quality rework,False,True
+EO-25035,6-cyl inline,Power generation,2025-07-30,2025-07-30,2025-09-07,2025-09-07,0,On time,True,True
+EO-25036,6-cyl inline,Marine,2025-03-17,2025-03-17,2025-04-25,2025-04-25,0,On time,True,True
+EO-25037,8-cyl inline,Marine,2025-04-05,2025-04-05,2025-05-19,2025-05-19,0,On time,True,True
+EO-25038,6-cyl inline,Power generation,2025-08-31,2025-08-31,2025-10-09,2025-10-12,3,Test bench capacity,False,True
+EO-25039,12-cyl V,Marine,2025-10-17,2025-10-17,2025-12-12,2025-12-12,0,On time,True,True
+EO-25040,8-cyl inline,Oil & Gas,2025-07-26,2025-07-26,2025-09-08,2025-09-08,0,On time,True,True
+EO-25041,12-cyl V,Marine,2025-10-07,2025-10-07,2025-12-02,2025-12-02,0,On time,True,True
+EO-25042,12-cyl V,Marine,2025-09-19,2025-09-19,2025-11-14,2025-11-14,0,On time,True,True
+EO-25043,6-cyl inline,Power generation,2025-05-30,2025-05-30,2025-07-08,2025-07-08,0,On time,True,True
+EO-25044,12-cyl V,Marine,2025-08-25,2025-08-25,2025-10-20,2025-10-23,3,Test bench capacity,False,True
+EO-25045,12-cyl V,Marine,2025-04-14,2025-04-16,2025-06-09,2025-06-12,3,Material shortage,False,True
+EO-25046,8-cyl inline,Power generation,2025-05-24,2025-05-24,2025-07-07,2025-07-07,0,On time,True,True
+EO-25047,6-cyl inline,Oil & Gas,2025-06-15,2025-06-15,2025-07-24,2025-07-24,0,On time,True,True
+EO-25048,12-cyl V,Marine,2025-10-21,2025-10-21,2025-12-16,2025-12-16,0,On time,True,True
+EO-25049,6-cyl inline,Marine,2025-09-17,2025-09-17,2025-10-26,2025-10-26,0,On time,True,True
+EO-25050,6-cyl inline,Power generation,2025-06-01,2025-06-01,2025-07-10,2025-07-13,3,Test bench capacity,False,True
+EO-25051,6-cyl inline,Oil & Gas,2025-07-20,2025-07-20,2025-08-28,2025-08-28,0,On time,True,True
+EO-25052,12-cyl V,Marine,2025-03-07,2025-03-07,2025-05-02,2025-05-08,6,Test bench capacity,False,True
+EO-25053,12-cyl V,Marine,2025-09-04,2025-09-04,2025-10-30,2025-10-30,0,On time,True,True
+EO-25054,12-cyl V,Marine,2025-06-20,2025-06-20,2025-08-15,2025-08-19,4,Test bench capacity,False,True
+EO-25055,12-cyl V,Marine,2025-06-14,2025-06-21,2025-08-09,2025-08-20,11,Engineering change,False,False
+EO-25056,8-cyl inline,Marine,2025-08-23,2025-08-23,2025-10-06,2025-10-06,0,On time,True,True
+EO-25057,8-cyl inline,Power generation,2025-07-14,2025-07-21,2025-08-27,2025-09-08,12,Material shortage,False,False
+EO-25058,6-cyl inline,Marine,2025-01-27,2025-02-02,2025-03-07,2025-03-17,10,Material shortage,False,False
+EO-25059,6-cyl inline,Marine,2025-04-02,2025-04-02,2025-05-11,2025-05-11,0,On time,True,True
+EO-25060,12-cyl V,Power generation,2025-02-28,2025-02-28,2025-04-25,2025-04-25,0,On time,True,True
+EO-25061,8-cyl inline,Power generation,2025-08-14,2025-08-14,2025-09-27,2025-09-27,0,On time,True,True
+EO-25062,8-cyl inline,Marine,2025-01-16,2025-01-16,2025-03-01,2025-03-01,0,On time,True,True
+EO-25063,12-cyl V,Power generation,2025-03-07,2025-03-12,2025-05-02,2025-05-11,9,Material shortage,False,False
+EO-25064,8-cyl inline,Power generation,2025-07-04,2025-07-04,2025-08-17,2025-08-17,0,On time,True,True
+EO-25065,8-cyl inline,Power generation,2025-08-02,2025-08-02,2025-09-15,2025-09-20,5,Test bench capacity,False,True
+EO-25066,8-cyl inline,Marine,2025-06-05,2025-06-05,2025-07-19,2025-07-19,0,On time,True,True
+EO-25067,6-cyl inline,Marine,2025-09-21,2025-09-21,2025-10-30,2025-10-30,0,On time,True,True
+EO-25068,6-cyl inline,Oil & Gas,2025-10-08,2025-10-08,2025-11-16,2025-11-16,0,On time,True,True
+EO-25069,8-cyl inline,Marine,2025-02-14,2025-02-14,2025-03-30,2025-03-30,0,On time,True,True
+EO-25070,6-cyl inline,Marine,2025-10-18,2025-10-18,2025-11-26,2025-11-26,0,On time,True,True
+EO-25071,8-cyl inline,Marine,2025-07-09,2025-07-09,2025-08-22,2025-08-25,3,Quality rework,False,True
+EO-25072,12-cyl V,Power generation,2025-07-15,2025-07-15,2025-09-09,2025-09-09,0,On time,True,True
+EO-25073,6-cyl inline,Oil & Gas,2025-02-03,2025-02-03,2025-03-14,2025-03-14,0,On time,True,True
+EO-25074,6-cyl inline,Marine,2025-07-11,2025-07-11,2025-08-19,2025-08-19,0,On time,True,True
+EO-25075,6-cyl inline,Oil & Gas,2025-08-11,2025-08-11,2025-09-19,2025-09-19,0,On time,True,True
+EO-25076,6-cyl inline,Marine,2025-06-29,2025-07-01,2025-08-07,2025-08-10,3,Engineering change,False,True
+EO-25077,12-cyl V,Power generation,2025-01-31,2025-01-31,2025-03-28,2025-03-28,0,On time,True,True
+EO-25078,8-cyl inline,Power generation,2025-06-11,2025-06-11,2025-07-25,2025-07-25,0,On time,True,True
+EO-25079,12-cyl V,Marine,2025-10-13,2025-10-13,2025-12-08,2025-12-08,0,On time,True,True
+EO-25080,12-cyl V,Marine,2025-08-11,2025-08-11,2025-10-06,2025-10-06,0,On time,True,True
+EO-25081,8-cyl inline,Marine,2025-02-16,2025-02-16,2025-04-01,2025-04-04,3,Quality rework,False,True
+EO-25082,12-cyl V,Oil & Gas,2025-10-20,2025-10-20,2025-12-15,2025-12-15,0,On time,True,True
+EO-25083,6-cyl inline,Power generation,2025-10-20,2025-10-20,2025-11-28,2025-11-28,0,On time,True,True
+EO-25084,6-cyl inline,Oil & Gas,2025-02-25,2025-02-25,2025-04-05,2025-04-05,0,On time,True,True
+EO-25085,6-cyl inline,Power generation,2025-09-03,2025-09-03,2025-10-12,2025-10-12,0,On time,True,True
+EO-25086,12-cyl V,Marine,2025-05-08,2025-05-08,2025-07-03,2025-07-03,0,On time,True,True
+EO-25087,8-cyl inline,Power generation,2025-07-03,2025-07-03,2025-08-16,2025-08-22,6,Customer change,False,True
+EO-25088,6-cyl inline,Marine,2025-05-19,2025-05-19,2025-06-27,2025-06-27,0,On time,True,True
+EO-25089,8-cyl inline,Marine,2025-08-28,2025-08-28,2025-10-11,2025-10-11,0,On time,True,True
+EO-25090,6-cyl inline,Power generation,2025-10-31,2025-10-31,2025-12-09,2025-12-09,0,On time,True,True
+EO-25091,12-cyl V,Power generation,2025-09-01,2025-09-01,2025-10-27,2025-10-27,0,On time,True,True
+EO-25092,8-cyl inline,Marine,2025-10-12,2025-10-18,2025-11-25,2025-12-05,10,Engineering change,False,False
+EO-25093,8-cyl inline,Marine,2025-10-16,2025-10-16,2025-11-29,2025-11-29,0,On time,True,True
+EO-25094,6-cyl inline,Power generation,2025-02-02,2025-02-02,2025-03-13,2025-03-13,0,On time,True,True
+EO-25095,8-cyl inline,Oil & Gas,2025-03-23,2025-03-23,2025-05-06,2025-05-06,0,On time,True,True
+EO-25096,8-cyl inline,Power generation,2025-08-10,2025-08-10,2025-09-23,2025-09-23,0,On time,True,True
+EO-25097,6-cyl inline,Marine,2025-07-02,2025-07-02,2025-08-10,2025-08-10,0,On time,True,True
+EO-25098,6-cyl inline,Marine,2025-01-21,2025-01-21,2025-03-01,2025-03-01,0,On time,True,True
+EO-25099,16-cyl V,Marine,2025-02-03,2025-02-03,2025-04-08,2025-04-08,0,On time,True,True
+EO-25100,16-cyl V,Power generation,2025-06-11,2025-06-11,2025-08-14,2025-08-14,0,On time,True,True
+EO-25101,12-cyl V,Oil & Gas,2025-07-09,2025-07-09,2025-09-03,2025-09-03,0,On time,True,True
+EO-25102,6-cyl inline,Marine,2025-02-25,2025-02-25,2025-04-05,2025-04-05,0,On time,True,True
+EO-25103,16-cyl V,Marine,2025-02-26,2025-02-26,2025-05-01,2025-05-01,0,On time,True,True
+EO-25104,12-cyl V,Marine,2025-02-13,2025-02-13,2025-04-10,2025-04-10,0,On time,True,True
+EO-25105,12-cyl V,Power generation,2025-06-24,2025-06-24,2025-08-19,2025-08-19,0,On time,True,True
+EO-25106,8-cyl inline,Power generation,2025-01-08,2025-01-08,2025-02-21,2025-02-21,0,On time,True,True
+EO-25107,6-cyl inline,Marine,2025-06-26,2025-06-26,2025-08-04,2025-08-04,0,On time,True,True
+EO-25108,6-cyl inline,Marine,2025-05-28,2025-05-28,2025-07-06,2025-07-06,0,On time,True,True
+EO-25109,16-cyl V,Power generation,2025-05-25,2025-05-25,2025-07-28,2025-07-28,0,On time,True,True
+EO-25110,8-cyl inline,Marine,2025-07-28,2025-07-28,2025-09-10,2025-09-10,0,On time,True,True
+EO-25111,6-cyl inline,Power generation,2025-06-11,2025-06-11,2025-07-20,2025-07-20,0,On time,True,True
+EO-25112,6-cyl inline,Marine,2025-08-12,2025-08-12,2025-09-20,2025-09-20,0,On time,True,True
+EO-25113,8-cyl inline,Marine,2025-08-23,2025-08-23,2025-10-06,2025-10-06,0,On time,True,True
+EO-25114,6-cyl inline,Oil & Gas,2025-10-09,2025-10-09,2025-11-17,2025-11-17,0,On time,True,True
+EO-25115,12-cyl V,Marine,2025-09-02,2025-09-02,2025-10-28,2025-10-28,0,On time,True,True
+EO-25116,12-cyl V,Marine,2025-06-10,2025-06-10,2025-08-05,2025-08-05,0,On time,True,True
+EO-25117,12-cyl V,Marine,2025-06-02,2025-06-10,2025-07-28,2025-08-11,14,Material shortage,False,False
+EO-25118,8-cyl inline,Marine,2025-03-17,2025-03-17,2025-04-30,2025-04-30,0,On time,True,True
+EO-25119,8-cyl inline,Marine,2025-07-04,2025-07-08,2025-08-17,2025-08-24,7,Material shortage,False,False
+EO-25120,8-cyl inline,Marine,2025-02-16,2025-02-16,2025-04-01,2025-04-01,0,On time,True,True
+EO-25121,8-cyl inline,Marine,2025-10-12,2025-10-12,2025-11-25,2025-11-25,0,On time,True,True
+EO-25122,6-cyl inline,Marine,2025-09-16,2025-09-16,2025-10-25,2025-10-25,0,On time,True,True
+EO-25123,8-cyl inline,Power generation,2025-02-10,2025-02-10,2025-03-26,2025-03-26,0,On time,True,True
+EO-25124,6-cyl inline,Power generation,2025-08-29,2025-08-29,2025-10-07,2025-10-07,0,On time,True,True
+EO-25125,8-cyl inline,Marine,2025-02-10,2025-02-10,2025-03-26,2025-03-26,0,On time,True,True
+EO-25126,6-cyl inline,Marine,2025-08-10,2025-08-10,2025-09-18,2025-09-25,7,Test bench capacity,False,True
+EO-25127,6-cyl inline,Marine,2025-02-01,2025-02-03,2025-03-12,2025-03-15,3,Engineering change,False,True
+EO-25128,6-cyl inline,Oil & Gas,2025-06-01,2025-06-01,2025-07-10,2025-07-10,0,On time,True,True
+EO-25129,8-cyl inline,Oil & Gas,2025-07-22,2025-07-22,2025-09-04,2025-09-04,0,On time,True,True
+EO-25130,6-cyl inline,Marine,2025-08-12,2025-08-17,2025-09-20,2025-09-29,9,Material shortage,False,False
+EO-25131,16-cyl V,Marine,2025-05-11,2025-05-11,2025-07-14,2025-07-14,0,On time,True,True
+EO-25132,8-cyl inline,Marine,2025-10-09,2025-10-14,2025-11-22,2025-12-01,9,Material shortage,False,False
+EO-25133,6-cyl inline,Marine,2025-08-26,2025-08-26,2025-10-04,2025-10-04,0,On time,True,True
+EO-25134,8-cyl inline,Power generation,2025-03-09,2025-03-09,2025-04-22,2025-04-22,0,On time,True,True
+EO-25135,6-cyl inline,Marine,2025-07-26,2025-07-26,2025-09-03,2025-09-03,0,On time,True,True
+EO-25136,16-cyl V,Marine,2025-08-13,2025-08-24,2025-10-16,2025-11-03,18,Material shortage,False,False
+EO-25137,8-cyl inline,Marine,2025-04-16,2025-04-16,2025-05-30,2025-05-30,0,On time,True,True
+EO-25138,12-cyl V,Marine,2025-08-15,2025-08-15,2025-10-10,2025-10-10,0,On time,True,True
+EO-25139,6-cyl inline,Marine,2025-10-02,2025-10-02,2025-11-10,2025-11-10,0,On time,True,True
+EO-25140,8-cyl inline,Power generation,2025-09-08,2025-09-08,2025-10-22,2025-10-22,0,On time,True,True
+EO-25141,8-cyl inline,Marine,2025-08-22,2025-08-22,2025-10-05,2025-10-05,0,On time,True,True
+EO-25142,16-cyl V,Oil & Gas,2025-07-15,2025-07-19,2025-09-17,2025-09-23,6,Material shortage,False,False
+EO-25143,8-cyl inline,Marine,2025-03-28,2025-03-28,2025-05-11,2025-05-11,0,On time,True,True
+EO-25144,8-cyl inline,Power generation,2025-09-01,2025-09-05,2025-10-15,2025-10-21,6,Material shortage,False,False
+EO-25145,6-cyl inline,Oil & Gas,2025-04-25,2025-04-25,2025-06-03,2025-06-11,8,Test bench capacity,False,True
+EO-25146,6-cyl inline,Oil & Gas,2025-06-14,2025-06-14,2025-07-23,2025-07-23,0,On time,True,True
+EO-25147,8-cyl inline,Power generation,2025-04-10,2025-04-10,2025-05-24,2025-05-24,0,On time,True,True
+EO-25148,8-cyl inline,Power generation,2025-04-09,2025-04-09,2025-05-23,2025-05-23,0,On time,True,True
+EO-25149,6-cyl inline,Power generation,2025-02-22,2025-02-22,2025-04-02,2025-04-02,0,On time,True,True

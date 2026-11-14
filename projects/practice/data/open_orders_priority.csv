@@ -1,0 +1,19 @@
+order_id,engine_family,segment,days_to_rts,material_ready_pct,penalty_clause,customer_tier,priority_score,action
+EO-26006,8-cyl inline,Oil & Gas,5,70,True,A,90,Expedite missing parts now
+EO-26010,6-cyl inline,Power generation,25,95,True,A,69,Monitor
+EO-26016,12-cyl V,Marine,10,70,True,C,69,Expedite missing parts now
+EO-26009,16-cyl V,Marine,42,55,True,A,68,Chase supplier dates
+EO-26003,12-cyl V,Marine,41,55,True,B,59,Chase supplier dates
+EO-26008,6-cyl inline,Power generation,42,90,True,A,58,Monitor
+EO-26013,12-cyl V,Power generation,7,100,False,B,50,Lock test-bench slot
+EO-26001,8-cyl inline,Marine,39,100,True,B,47,Monitor
+EO-26014,16-cyl V,Marine,51,90,True,B,42,Monitor
+EO-26012,16-cyl V,Oil & Gas,24,95,False,B,39,Monitor
+EO-26017,8-cyl inline,Marine,36,70,False,B,38,Chase supplier dates
+EO-26015,12-cyl V,Marine,16,95,False,C,38,Monitor
+EO-26002,12-cyl V,Power generation,43,80,False,B,30,Monitor
+EO-26011,8-cyl inline,Power generation,45,80,False,B,29,Monitor
+EO-26005,12-cyl V,Marine,44,90,False,B,27,Monitor
+EO-26007,16-cyl V,Marine,49,95,False,B,22,Monitor
+EO-26004,16-cyl V,Oil & Gas,38,100,False,C,20,Monitor
+EO-26000,16-cyl V,Marine,52,70,False,C,19,Chase supplier dates

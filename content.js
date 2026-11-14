@@ -55,7 +55,7 @@ const SITE = {
         "I enjoy problems where operations meet numbers: why stock sits in the wrong place, where cost leaks out of a process, and how to explain the fix so people act on it."
       ],
       metrics: ["cost", "sam", "launch", "langs"],
-      projects: ["honda-network", "forecasting", "binding-tape", "product-launch", "outsourcing", "queuing"],
+      projects: ["honda-network", "sop-capacity", "binding-tape", "schedule-adherence", "material-availability", "product-launch", "forecasting", "outsourcing", "queuing"],
       skillTab: "expertise"
     },
     analyst: {
@@ -66,7 +66,7 @@ const SITE = {
         "Forecasting, KPI reporting and process analysis are where I do my best work."
       ],
       metrics: ["cost", "sam", "reports", "langs"],
-      projects: ["honda-network", "forecasting", "product-launch", "outsourcing", "queuing", "ai-risk"],
+      projects: ["honda-network", "sop-capacity", "schedule-adherence", "material-availability", "forecasting", "product-launch", "outsourcing", "queuing", "ai-risk"],
       skillTab: "software"
     },
     planner: {
@@ -77,7 +77,7 @@ const SITE = {
         "I bring planning, data and communication together."
       ],
       metrics: ["cost", "reports", "sam", "langs"],
-      projects: ["honda-network", "forecasting", "binding-tape", "outsourcing", "product-launch", "queuing"],
+      projects: ["honda-network", "material-availability", "sop-capacity", "schedule-adherence", "forecasting", "binding-tape", "outsourcing", "product-launch", "queuing"],
       skillTab: "expertise"
     },
     trainee: {
@@ -88,7 +88,7 @@ const SITE = {
         "Now I bring a German master's degree and two years of German work-culture experience, ready to take responsibility in a team."
       ],
       metrics: ["sam", "cost", "rotations", "langs"],
-      projects: ["binding-tape", "quick-changeover", "honda-network", "queuing", "digital-workshop", "product-launch"],
+      projects: ["binding-tape", "schedule-adherence", "quick-changeover", "honda-network", "sop-capacity", "queuing", "digital-workshop", "product-launch"],
       skillTab: "expertise"
     }
   },
@@ -134,6 +134,81 @@ const SITE = {
 
   /* ---------- Case studies ---------- */
   projects: [
+    {
+      id: "schedule-adherence",
+      title: "Engine build schedule adherence & order prioritisation",
+      org: "Practice project · simulated large-engine plant",
+      period: "2026",
+      type: "Practice",
+      hue: 0,
+      role: "Self-directed analysis",
+      tools: ["Python (pandas)", "KPI design", "Pareto analysis"],
+      code: "https://github.com/vukhanhlinh2310/vukhanhlinh2310.github.io/tree/main/projects/practice",
+      result: { value: "73%", label: "RTS adherence vs. 90% target" },
+      problem:
+        "A plant building large engines plans every order with a Start-of-Line (SOL) and a Ready-to-Ship (RTS) date. Management needs to know how reliable these dates are, why orders slip, and which open orders to protect first.",
+      approach:
+        "Built a simulated order book of 150 engine orders across four engine families, measured SOL and RTS adherence with a ±2-day tolerance, ran a Pareto analysis of delay days by root cause, and designed a transparent priority score for the next 8 weeks of open orders.",
+      outcome:
+        "RTS adherence averages 73% against a 90% target and is lowest in June. Material shortages and engineering changes cause 64% of all delay days, so fixing these two levers recovers most of the lost time.",
+      recommendations: [
+        "Check material readiness for every order 6 weeks before SOL.",
+        "Freeze engineering changes after SOL unless planning approves them.",
+        "Use the priority score in the daily planning meeting to decide expediting and test-bench slots."
+      ],
+      reflection: "A KPI only helps when it points to a cause. Pairing adherence with a Pareto of delay days turned a red number into two concrete levers.",
+      next: ["Connect the score to live ERP data (order status, material availability).", "Track adherence per engine family and customer segment."]
+    },
+    {
+      id: "sop-capacity",
+      title: "S&OP rough-cut capacity check for 2027",
+      org: "Practice project · simulated large-engine plant",
+      period: "2026",
+      type: "Practice",
+      hue: 4,
+      role: "Self-directed analysis",
+      tools: ["Python (pandas)", "Capacity planning", "Scenario analysis"],
+      code: "https://github.com/vukhanhlinh2310/vukhanhlinh2310.github.io/tree/main/projects/practice",
+      result: { value: "96%", label: "peak test-bench load, no buffer left" },
+      problem:
+        "S&OP needs an early answer to one question: can the plant build the demand plan? If not, where is the bottleneck and how big is the gap?",
+      approach:
+        "Translated a 12-month demand plan for four engine families into work-centre hours using standard hours per engine, compared them with available capacity (working days, shifts, resources, efficiency) and tested a +15% demand scenario.",
+      outcome:
+        "Machining, assembly and painting stay at or below 81% utilisation. The test bench is the bottleneck: it already runs at 92–96% from April to June and October to December, and goes over capacity in seven months if demand rises by 15%, a gap of about 750 test-bench hours.",
+      recommendations: [
+        "Prepare an extra test-bench shift for April–June and September–December if the upside scenario firms up.",
+        "Pull tests of 12- and 16-cylinder engines forward into July and August, when load is lower.",
+        "Review test cycle times of the largest engines, which use the most bench hours."
+      ],
+      reflection: "Rough-cut planning is simple maths, but it moves the capacity conversation months earlier, while options are still cheap.",
+      next: ["Add long-lead material constraints to the capacity check.", "Build a scenario slider in Excel for the S&OP meeting."]
+    },
+    {
+      id: "material-availability",
+      title: "Material availability: ABC/XYZ and safety stock",
+      org: "Practice project · simulated engine parts",
+      period: "2026",
+      type: "Practice",
+      hue: 2,
+      role: "Self-directed analysis",
+      tools: ["Python (pandas)", "Inventory policy", "ABC/XYZ"],
+      code: "https://github.com/vukhanhlinh2310/vukhanhlinh2310.github.io/tree/main/projects/practice",
+      result: { value: "21", label: "parts need action now" },
+      problem:
+        "An engine build stops when a single part is missing, but too much stock ties up capital. Which parts need tighter control, how much safety stock is right, and what needs action today?",
+      approach:
+        "Simulated 52 weeks of demand for 60 critical engine parts, classified them by value (ABC) and demand variability (XYZ), calculated safety stock and reorder points per service level, and checked current stock against them.",
+      outcome:
+        "26 parts make up 80% of material value. 19 parts are below their reorder point and 2 are already below safety stock. A gasket kit with a 16-week lead time would run out in week 8 without expediting.",
+      recommendations: [
+        "Release orders for the 19 parts below reorder point and expedite the 2 below safety stock.",
+        "Dual-source or hold strategic stock for erratic (Z) parts with long lead times.",
+        "Review safety stock quarterly as demand variability changes."
+      ],
+      reflection: "Safety stock is a policy decision, not just a formula: the service level per class is where business priorities enter the numbers.",
+      next: ["Add open purchase orders to the projection.", "Show stock coverage in a weekly planner dashboard."]
+    },
     {
       id: "honda-network",
       title: "Redesigning cross-warehouse back-order release",

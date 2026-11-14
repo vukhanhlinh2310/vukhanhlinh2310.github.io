@@ -130,12 +130,14 @@
       <div class="case-meta">${meta}</div>
       ${sec("The challenge", para(p.problem))}
       ${sec("Approach", para(p.approach))}
-      ${preview ? sec("Analysis & visuals", '<div class="chart-slot">Chart / dashboard goes here (hidden on the public site until added)</div>') : ""}
+      ${window.PRACTICE && window.PRACTICE[p.id] ? '<section class="wide"><h2>Analysis &amp; visuals</h2><div id="practice-viz"></div></section>' : preview ? sec("Analysis & visuals", '<div class="chart-slot">Chart / dashboard goes here (hidden on the public site until added)</div>') : ""}
       ${sec("Results", para(p.outcome))}
       ${sec("Recommendations", list(p.recommendations))}
       ${sec("Reflection", para(p.reflection))}
       ${sec("Next steps", list(p.next))}
+      ${p.type === "Practice" ? `<p class="practice-note">Practice project with a simulated dataset, built to mirror the planning problems in Supply Chain Analyst roles. ${p.code ? `<a href="${esc(p.code)}" target="_blank" rel="noopener">View the Python code &amp; data on GitHub &rarr;</a>` : ""}</p>` : ""}
       <nav class="case-nav">${prev ? `<a href="#work/${prev.id}">&larr; ${esc(prev.title)}</a>` : "<span></span>"}${next ? `<a href="#work/${next.id}">${esc(next.title)} &rarr;</a>` : ""}</nav>`;
+    if (window.PRACTICE && window.PRACTICE[p.id] && window.renderPractice) window.renderPractice($("practice-viz"), window.PRACTICE[p.id]);
   }
 
   /* ---------- Story ---------- */
