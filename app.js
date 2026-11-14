@@ -152,6 +152,7 @@
       ${sec("The challenge", para(p.problem))}
       ${sec("Approach", para(p.approach))}
       ${hasViz ? '<section class="wide"><h2>Analysis &amp; visuals</h2><div id="practice-viz"></div></section>' : preview ? sec("Analysis & visuals", '<div class="chart-slot">Chart / dashboard goes here (hidden on the public site until added)</div>') : ""}
+      ${p.gallery ? `<section class="wide"><h2>How it works</h2>${p.simulated ? '<p class="sim-banner">All screenshots use <b>simulated data</b>. The original tool contains confidential bank figures, so this demo rebuilds the same structure with invented numbers.</p>' : ""}<div class="steps">${p.gallery.map((g) => `<figure class="step"><a href="${esc(g.src)}" target="_blank" rel="noopener"><img src="${esc(g.src)}" alt="${esc(g.title)}" loading="lazy"></a><figcaption><b>${esc(g.title)}</b>${esc(g.text)}</figcaption></figure>`).join("")}</div>${p.download ? `<a class="btn-download" href="${esc(p.download)}" download>Download the demo workbook (.xlsx, simulated data)</a>` : ""}</section>` : ""}
       ${sec("Results", para(p.outcome))}
       ${sec("Recommendations", list(p.recommendations))}
       ${sec("Reflection", para(p.reflection))}

@@ -363,3 +363,13 @@ body.preview .skill-rail { top: 118px; }
   .hobby-photos { height: 240px; }
   .contact-inline a span { font-size: .82rem; }
 }
+
+/* step gallery (screenshots) */
+.sim-banner { background: #FFF1B8; color: #6B5300; border: 1px dashed #C9A100; border-radius: 12px; padding: 10px 14px; font-size: .9rem; margin-bottom: 16px; max-width: none !important; }
+.steps { display: grid; gap: 18px; }
+.step { background: #fff; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
+.step img { width: 100%; border-bottom: 1px solid var(--line); background: #fff; transition: opacity .2s; }
+.step a:hover img { opacity: .9; }
+.step figcaption { padding: 14px 18px; font-size: .92rem; color: var(--muted); }
+.step figcaption b { display: block; color: var(--ink); font-size: 1rem; margin-bottom: 2px; }
+.btn-download { display: inline-block; margin-top: 16px; padding: .75rem 1.3rem; border-radius: 999px; background: var(--gold-grad); color: #fff; font-weight: 700; font-size: .9rem; box-shadow: var(--shadow); }

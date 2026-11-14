@@ -87,6 +87,7 @@ const SITE = {
         { title: "Cross-functional Alignment", text: "Acted as first contact, connecting internal stakeholders (Compliance, Operations, IT) and external partners." }
       ],
       projects: [
+        { text: "Weekly KPI dashboard for the blocked-account product (Excel)", link: "kpi-dashboard" },
         { text: "New financial product launch", link: "product-launch" },
         { text: "Outsourcing project (ongoing)", link: "outsourcing" }
       ]
@@ -398,6 +399,64 @@ const SITE = {
         "lean",
         "production"
       ]
+    },
+    {
+      "id": "kpi-dashboard",
+      "title": "Weekly KPI dashboard for a banking product",
+      "org": "VietinBank Germany Branch",
+      "period": "2024–2026",
+      "type": "Work",
+      "hue": 3,
+      "role": "Working Student, built and maintains the tool",
+      "tools": [
+        "Excel (SUMIFS, pivot tables, VBA)",
+        "Charts",
+        "Data validation"
+      ],
+      "result": {
+        "value": "1 page",
+        "label": "weekly report instead of manual counting"
+      },
+      "problem": "Account openings, closings and balances for a blocked-account product were counted manually from system exports, with formats changing from year to year and no quick way to compare periods.",
+      "approach": "Built a macro-enabled Excel dashboard: a weekly database fed by the core-banking export since 2022, monthly and yearly summaries, and a one-page dashboard with year and week selectors, year-to-date comparison and around 20 charts.",
+      "outcome": "One weekly report replaced ad-hoc counting. Management sees weekly, monthly and year-to-date trends and quarterly targets on one page, and new data only needs to be pasted in.",
+      "recommendations": [
+        "Keep one row per week as the single source of truth and build every view on top of it.",
+        "Automate the export step next, so the database refreshes without copy-paste."
+      ],
+      "reflection": "The value was not the charts but the structure behind them: once the data had one clean format, every new question became a formula instead of a new manual count.",
+      "next": [
+        "Move the logic to Power BI for automatic refresh and sharing.",
+        "Add a simple forecast of openings before the summer peak."
+      ],
+      "skills": [
+        "excel",
+        "data"
+      ],
+      "simulated": true,
+      "gallery": [
+        {
+          "src": "assets/projects/kpi-dashboard/2-database.png",
+          "title": "Step 1 · Database",
+          "text": "One row per week from the core-banking export: openings, closings, account types and balances."
+        },
+        {
+          "src": "assets/projects/kpi-dashboard/3-monthly.png",
+          "title": "Step 2 · Monthly summary",
+          "text": "SUMIFS formulas aggregate the database by month and compare the years side by side."
+        },
+        {
+          "src": "assets/projects/kpi-dashboard/1-dashboard.png",
+          "title": "Step 3 · Dashboard",
+          "text": "Pick a year and a week in the yellow cells: the four KPI blocks and the weekly chart update automatically."
+        },
+        {
+          "src": "assets/projects/kpi-dashboard/4-yearly-overview.png",
+          "title": "Step 4 · Yearly overview",
+          "text": "Openings by account type and year-on-year change for management meetings."
+        }
+      ],
+      "download": "assets/projects/kpi-dashboard/KPI_Dashboard_DEMO_simulated_data.xlsx"
     },
     {
       "id": "product-launch",
