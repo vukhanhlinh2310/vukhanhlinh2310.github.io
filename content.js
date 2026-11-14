@@ -38,7 +38,7 @@ const SITE = {
     }
   ],
   "about": [
-    "From the shop floor in Vietnam to a bank in Frankfurt and a master's at TU Darmstadt, I bring data, forecasting and a financial mindset to supply chain decisions, from inventory and capacity to S&OP."
+    "From the shop floor in Vietnam to a bank in Frankfurt and a master's at TU Darmstadt, I combine supply chain expertise with a financial perspective to support more holistic supply chain decisions, from inventory and capacity to S&OP."
   ],
   "organizations": [
     {
