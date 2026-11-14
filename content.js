@@ -37,12 +37,12 @@ const SITE = {
 
   /* ---------- Organizations (logo strip) ---------- */
   organizations: [
-    { name: "TU Darmstadt", short: "TU", kind: "MSc", logo: "" },
-    { name: "Foreign Trade University", short: "FTU", kind: "Bachelor", logo: "" },
-    { name: "VietinBank", short: "VTB", kind: "Germany Branch", logo: "" },
-    { name: "Crystal International", short: "CI", kind: "Crystal Martin VN", logo: "" },
-    { name: "Honda Vietnam", short: "H", kind: "Parts SCM Center", logo: "" },
-    { name: "FIATA", short: "FIATA", kind: "Higher Diploma", logo: "" }
+    { name: "TU Darmstadt", short: "TU", kind: "MSc", logo: "assets/logos/tu-darmstadt.png", url: "https://www.tu-darmstadt.de" },
+    { name: "Foreign Trade University", short: "FTU", kind: "Bachelor", logo: "assets/logos/ftu.png", url: "https://ftu.edu.vn" },
+    { name: "VietinBank", short: "VTB", kind: "Germany Branch", logo: "assets/logos/vietinbank.png", url: "https://www.vietinbank.de" },
+    { name: "Crystal International", short: "CI", kind: "Crystal Martin VN", logo: "assets/logos/crystal.png", url: "https://www.crystalgroup.com" },
+    { name: "Honda Vietnam", short: "H", kind: "Parts SCM Center", logo: "assets/logos/honda.png", url: "https://www.honda.com.vn" },
+    { name: "FIATA", short: "FIATA", kind: "Higher Diploma", logo: "", url: "" }
   ],
 
   /* ---------- Versions ---------- */

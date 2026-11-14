@@ -82,8 +82,9 @@
   $("metrics").innerHTML = P.metrics.map((m) => SITE.metrics[m]).filter(Boolean)
     .map((m) => `<div class="metric reveal"><strong class="grad-text">${esc(m.value)}</strong><span>${esc(m.label)}</span></div>`).join("");
   $("logos").innerHTML = SITE.organizations.map((o) =>
-    `<div class="logo-card reveal">${o.logo ? `<img src="${esc(o.logo)}" alt="${esc(o.name)} logo" loading="lazy">` : `<span class="logo-badge">${esc(o.short)}</span>`}
-      <b>${esc(o.name)}</b><small>${esc(o.kind)}</small></div>`).join("");
+    `<${o.url ? `a href="${esc(o.url)}" target="_blank" rel="noopener"` : "div"} class="logo-card reveal">
+      <span class="logo-img">${o.logo ? `<img src="${esc(o.logo)}" alt="${esc(o.name)} logo" loading="lazy">` : `<span class="logo-badge">${esc(o.short)}</span>`}</span>
+      <b>${esc(o.name)}</b><small>${esc(o.kind)}</small></${o.url ? "a" : "div"}>`).join("");
 
   const byId = Object.fromEntries(SITE.projects.map((p) => [p.id, p]));
   const ordered = P.projects.map((id) => byId[id]).filter(Boolean).filter(ready);
