@@ -617,7 +617,7 @@ const SITE = {
         "label": "logistics cost of the process"
       },
       "problem": "Honda Vietnam supplies spare parts to dealers nationwide from two warehouses: Vinh Phuc in the north and Binh Duong in the south. When the local warehouse was out of stock, dealer orders became back-orders even if the part was available in the other warehouse. Releasing them across warehouses was slow and costly: orders were split into 7–10 SAP batches and shipped either slowly with periodic container moves or expensively by express.",
-      "approach": "Analysed back-order and release data from 2020 to March 2023, ranked parts with an ABC analysis by sales, mapped the cross-release procedure in SAP and with the outsourced warehouse operator, and evaluated the activity with a SWOT. Benchmarked distribution models from supply chain literature to redesign the north-to-south flow.",
+      "approach": "Analysed back-order and release data from 2020 to April 2023, ranked parts with an ABC analysis by sales, and mapped both release types: around 100 urgent orders per day released across both warehouses for all ranks, and 500–700 periodic stock orders per day released only for low-rank parts at Binh Duong. Assessed the internal and external factors behind back-orders (supplier performance, abnormal demand, limited capacity in Binh Duong, inaccurate forecasting, IT systems), evaluated the activity with a SWOT, and benchmarked distribution models from supply chain literature to redesign the north-to-south flow.",
       "outcome": "Proposed a \"direct shipping with milk runs\" model: each day's north-to-south releases are consolidated into one truck that serves several dealers in the south, instead of splitting urgent and stock orders. Express shipping stays for the small south-to-north flow. The proposal cut the logistics cost of the back-order release process by 8.8%.",
       "recommendations": [
         "Forecast demand together with the sales and procurement teams instead of from history alone.",
@@ -641,12 +641,32 @@ const SITE = {
           "text": "Vinh Phuc (north, red) and Binh Duong (south, blue) serve their own regions; back-orders are released from the other warehouse when local stock runs out. Source: bachelor's thesis, based on company information."
         },
         {
-          "src": "assets/projects/honda/2-release-process.png",
-          "title": "Cross-warehouse release process",
-          "text": "Export back-order and on-hand data from SAP, combine them to find items that can be released, change the warehouse in SAP, then the warehouse picks, packs and delivers."
+          "src": "assets/projects/honda/2-release-types.jpg",
+          "title": "Two types of cross-warehouse release",
+          "text": "Urgent orders (around 100 a day, all ranks, both warehouses) versus periodic stock orders (500–700 a day, ranks D–F, Binh Duong only)."
+        },
+        {
+          "src": "assets/projects/honda/3-factors.jpg",
+          "title": "What drives back-orders",
+          "text": "External factors such as supplier performance and abnormal demand, and internal ones such as warehouse capacity, forecasting and IT systems."
+        },
+        {
+          "src": "assets/projects/honda/4-swot.jpg",
+          "title": "SWOT of cross-warehouse release",
+          "text": "Strong for service and resilience, but costly and hard to balance stock between two warehouses in real time."
+        },
+        {
+          "src": "assets/projects/honda/5-reco-backorder.jpg",
+          "title": "Recommendations: fewer back-orders",
+          "text": "Cross-functional forecasting, a review of both warehouses' layout and capacity, a better online parts lookup for dealers, and closer supplier relationships."
+        },
+        {
+          "src": "assets/projects/honda/6-reco-efficiency.jpg",
+          "title": "Recommendations: a faster release process",
+          "text": "Better SAP synchronisation with the warehouse operator, automated allocation of urgent orders, clear guidelines and staff training."
         }
       ],
-      "galleryTitle": "Network & process",
+      "galleryTitle": "From the thesis defence",
       "galleryCols": 2
     },
     {
