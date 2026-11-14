@@ -38,9 +38,7 @@ const SITE = {
     }
   ],
   "about": [
-    "I am finishing my MSc in Logistics & Supply Chain Management at TU Darmstadt (thesis submission December 2026), after a bachelor's in International Business at Foreign Trade University in Vietnam.",
-    "I started on the operations side: spare parts inventory control at Honda's Part Supply Chain Management Center, then a management trainee program at Crystal International. Since 2024 I have worked at VietinBank's Germany branch, where I added data analysis, partner management and German work culture to my toolkit.",
-    "I enjoy problems where operations meet numbers: why stock sits in the wrong place, where cost leaks out of a process, and how to explain the fix so people act on it."
+    "From the shop floor in Vietnam to a bank in Frankfurt and a master's at TU Darmstadt, I bring data, forecasting and a financial mindset to supply chain decisions, from inventory and capacity to S&OP."
   ],
   "organizations": [
     {
