@@ -12,7 +12,7 @@ const SITE = {
   "name": "Linh Vu",
   "headline": "Linh Vu – Supply Chain Analyst",
   "coverTitle": "Supply Chain · Operations · Analytics",
-  "quote": "Supply chain expertise with a financial perspective, for decisions that see the whole picture.",
+  "quote": "Where supply chain meets finance.",
   "location": "Darmstadt, Germany",
   "availability": "Available from January 2027",
   "photo": "assets/photos/avatar.jpg",
