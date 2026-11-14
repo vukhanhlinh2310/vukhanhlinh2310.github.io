@@ -299,7 +299,7 @@ const SITE = {
       ],
       "projects": [
         {
-          "text": "Cross-warehouse back-order release optimization: proposed a new distribution network and cut the process's logistics cost by 8.8%",
+          "text": "Cross-warehouse back-order release optimization: proposed a new distribution network, estimated to cut the process's logistics cost by 8.8%",
           "link": "honda-network"
         },
         {
@@ -538,7 +538,12 @@ const SITE = {
           "text": "From real sales data to forecast bias, a shipping simulation, and finally the best forecasting method per network leg."
         }
       ],
-      "galleryTitle": "Model & method"
+      "galleryTitle": "Model & method",
+      "summary": {
+        "problem": "Retailers pick forecasting methods by accuracy, but for perishable products the direction of the error may cost more than its size.",
+        "did": "Built a Python pipeline comparing six forecasting methods on real dairy sales, and a simulator of anticipatory shipping across a three-tier network.",
+        "result": "A per-leg recommendation of which method minimises total cost. Final results with the submission in December 2026."
+      }
     },
     {
       "id": "schedule-adherence",
@@ -571,7 +576,12 @@ const SITE = {
         "production",
         "data",
         "python"
-      ]
+      ],
+      "summary": {
+        "problem": "A large-engine plant needs to know how reliable its start-of-line and ready-to-ship dates are, and which open orders to protect first.",
+        "did": "Simulated 150 engine orders, measured adherence, ran a Pareto analysis of delay causes and built a priority score in Python.",
+        "result": "RTS adherence of 73% against a 90% target; two causes drive 64% of all delay days."
+      }
     },
     {
       "id": "sop-capacity",
@@ -605,7 +615,12 @@ const SITE = {
         "production",
         "data",
         "python"
-      ]
+      ],
+      "summary": {
+        "problem": "S&OP needs an early answer: can the plant build next year's demand plan, and where is the bottleneck?",
+        "did": "Converted a 12-month demand plan into work-centre hours and tested a +15% demand scenario.",
+        "result": "The test bench is the bottleneck: up to 96% loaded and over capacity in 7 months under the upside scenario."
+      }
     },
     {
       "id": "material-availability",
@@ -638,7 +653,12 @@ const SITE = {
         "inventory",
         "data",
         "python"
-      ]
+      ],
+      "summary": {
+        "problem": "One missing part stops an engine build, but extra stock ties up capital.",
+        "did": "Classified 60 parts by ABC/XYZ, calculated safety stock and reorder points, and projected stock for critical parts.",
+        "result": "21 parts need action now; one long-lead part would run out in week 8 without expediting."
+      }
     },
     {
       "id": "honda-network",
@@ -657,11 +677,11 @@ const SITE = {
       ],
       "result": {
         "value": "-8.8%",
-        "label": "logistics cost of the process"
+        "label": "estimated logistics cost of the process"
       },
       "problem": "Honda Vietnam supplies spare parts to dealers nationwide from two warehouses: Vinh Phuc in the north and Binh Duong in the south. When the local warehouse was out of stock, dealer orders became back-orders even if the part was available in the other warehouse. Releasing them across warehouses was slow and costly: orders were split into 7–10 SAP batches and shipped either slowly with periodic container moves or expensively by express.",
       "approach": "Analysed back-order and release data from 2020 to April 2023, ranked parts with an ABC analysis by sales, and mapped both release types: around 100 urgent orders per day released across both warehouses for all ranks, and 500–700 periodic stock orders per day released only for low-rank parts at Binh Duong. Assessed the internal and external factors behind back-orders (supplier performance, abnormal demand, limited capacity in Binh Duong, inaccurate forecasting, IT systems), evaluated the activity with a SWOT, and benchmarked distribution models from supply chain literature to redesign the north-to-south flow.",
-      "outcome": "Proposed a \"direct shipping with milk runs\" model: each day's north-to-south releases are consolidated into one truck that serves several dealers in the south, instead of splitting urgent and stock orders. Express shipping stays for the small south-to-north flow. The proposal cut the logistics cost of the back-order release process by 8.8%.",
+      "outcome": "Proposed a \"direct shipping with milk runs\" model: each day's north-to-south releases are consolidated into one truck that serves several dealers in the south, instead of splitting urgent and stock orders. Express shipping stays for the small south-to-north flow. The proposal was estimated to cut the logistics cost of the back-order release process by 8.8%.",
       "recommendations": [
         "Forecast demand together with the sales and procurement teams instead of from history alone.",
         "Review safety stock per part instead of applying one standard per ABC rank.",
@@ -684,33 +704,18 @@ const SITE = {
           "text": "Vinh Phuc (north, red) and Binh Duong (south, blue) serve their own regions; back-orders are released from the other warehouse when local stock runs out. Source: bachelor's thesis, based on company information."
         },
         {
-          "src": "assets/projects/honda/2-release-types.jpg",
-          "title": "Two types of cross-warehouse release",
-          "text": "Urgent orders (around 100 a day, all ranks, both warehouses) versus periodic stock orders (500–700 a day, ranks D–F, Binh Duong only)."
-        },
-        {
-          "src": "assets/projects/honda/3-factors.jpg",
-          "title": "What drives back-orders",
-          "text": "External factors such as supplier performance and abnormal demand, and internal ones such as warehouse capacity, forecasting and IT systems."
-        },
-        {
-          "src": "assets/projects/honda/4-swot.jpg",
-          "title": "SWOT of cross-warehouse release",
-          "text": "Strong for service and resilience, but costly and hard to balance stock between two warehouses in real time."
-        },
-        {
-          "src": "assets/projects/honda/5-reco-backorder.jpg",
-          "title": "Recommendations: fewer back-orders",
-          "text": "Cross-functional forecasting, a review of both warehouses' layout and capacity, a better online parts lookup for dealers, and closer supplier relationships."
-        },
-        {
-          "src": "assets/projects/honda/6-reco-efficiency.jpg",
-          "title": "Recommendations: a faster release process",
-          "text": "Better SAP synchronisation with the warehouse operator, automated allocation of urgent orders, clear guidelines and staff training."
+          "src": "assets/projects/honda/2-milk-run-network.jpg",
+          "title": "Proposed network: direct shipping with milk runs",
+          "text": "One daily truck from Vinh Phuc collects the north-to-south releases and serves several dealers in the south in one route, instead of separate urgent and stock shipments. Model adapted from Chopra & Meindl, Supply Chain Management."
         }
       ],
-      "galleryTitle": "From the thesis defence",
-      "galleryCols": 2
+      "galleryTitle": "Network & proposal",
+      "galleryCols": 2,
+      "summary": {
+        "problem": "Spare-part back-orders were released between Honda's northern and southern warehouses in many small, slow or expensive shipments.",
+        "did": "Analysed back-order and release data in SAP, mapped the process and redesigned the north-to-south distribution flow (bachelor's thesis).",
+        "result": "Proposed a daily milk-run model, estimated to cut the logistics cost of the process by 8.8%."
+      }
     },
     {
       "id": "binding-tape",
@@ -740,7 +745,12 @@ const SITE = {
         "process",
         "lean",
         "production"
-      ]
+      ],
+      "summary": {
+        "problem": "Binding-tape usage on critical sewing operations slowed output and wasted material.",
+        "did": "Studied the operations on the floor and standardised a better working method.",
+        "result": "Standard allowed minutes on critical operations reduced by 21%."
+      }
     },
     {
       "id": "kpi-dashboard",
@@ -794,7 +804,12 @@ const SITE = {
           "text": "Openings by account type and year-on-year change for management meetings."
         }
       ],
-      "download": "assets/projects/kpi-dashboard/KPI_Dashboard_DEMO_simulated_data.xlsx"
+      "download": "assets/projects/kpi-dashboard/KPI_Dashboard_DEMO_simulated_data.xlsx",
+      "summary": {
+        "problem": "Account openings and balances for a banking product were counted manually each week.",
+        "did": "Built an Excel dashboard on a weekly database with year/week selectors, year-on-year comparison and charts.",
+        "result": "One weekly report replaced manual counting. Screenshots use simulated data."
+      }
     },
     {
       "id": "product-launch",
@@ -826,7 +841,12 @@ const SITE = {
         "stakeholder",
         "data",
         "excel"
-      ]
+      ],
+      "summary": {
+        "problem": "The bank wanted a new solution for its customer segment without validated demand, partners or launch process.",
+        "did": "Led demand and feasibility analysis, partner selection and alignment across Compliance, Operations and IT.",
+        "result": "Launched to market as a new recurring revenue stream."
+      }
     },
     {
       "id": "outsourcing",
@@ -854,7 +874,12 @@ const SITE = {
         "partner",
         "stakeholder",
         "data"
-      ]
+      ],
+      "summary": {
+        "problem": "TODO",
+        "did": "TODO",
+        "result": "TODO"
+      }
     },
     {
       "id": "queuing",
@@ -885,7 +910,12 @@ const SITE = {
         "process",
         "data",
         "capacity"
-      ]
+      ],
+      "summary": {
+        "problem": "Staffing and layout decisions in order picking are often made by slow simulation or trial and error.",
+        "did": "Systematic literature review of 24 studies applying queuing theory to warehouse order picking.",
+        "result": "Queuing models give fast, clear rules for staffing, station design and transport sizing; time-varying demand is the main gap."
+      }
     },
     {
       "id": "quick-changeover",
@@ -952,7 +982,12 @@ const SITE = {
         }
       ],
       "galleryTitle": "From pit stop to sewing line",
-      "galleryCols": 2
+      "galleryCols": 2,
+      "summary": {
+        "problem": "Style changeovers on sewing lines stopped production for too long, with no shared plan or escalation path.",
+        "did": "Applied Formula 1 pit-stop logic: moved preparation before the stop, gave every step an owner and a deadline, and designed an escalation map and a training workshop.",
+        "result": "One standard QCO process with 17 owned steps and clear ramp-up targets."
+      }
     },
     {
       "id": "ai-risk",
@@ -1024,7 +1059,12 @@ const SITE = {
       ],
       "galleryTitle": "Prototype",
       "galleryNote": "Redesigned versions of the prototype screens from the project; the company name is replaced with a placeholder.",
-      "galleryCols": 2
+      "galleryCols": 2,
+      "summary": {
+        "problem": "A global pharmaceutical company kept project risks in scattered Excel files, so past lessons were rarely reused.",
+        "did": "Interviewed experts and designed an AI-augmented risk and lessons-learned platform on Microsoft 365, with prototypes.",
+        "result": "A phased framework where AI retrieves similar past risks and project managers stay accountable."
+      }
     },
     {
       "id": "freight-wagon",
@@ -1054,7 +1094,12 @@ const SITE = {
       "skills": [
         "data",
         "process"
-      ]
+      ],
+      "summary": {
+        "problem": "Can sensor and telematics data on freight wagons make European rail freight more sustainable?",
+        "did": "Systematic literature review of 27 studies along three research questions.",
+        "result": "Wagon data improves economic, social and environmental performance and enables predictive maintenance."
+      }
     },
     {
       "id": "digital-workshop",
@@ -1088,7 +1133,12 @@ const SITE = {
         "powerbi",
         "ai",
         "pm"
-      ]
+      ],
+      "summary": {
+        "problem": "Teams at the plant did many reports by hand and did not know which digital tools they already had.",
+        "did": "Organised a hands-on workshop with booths for Excel VBA, Power Query, Power BI, Power Automate and AI tools.",
+        "result": "Teams identified first tasks to automate with tools already available."
+      }
     }
   ]
 };

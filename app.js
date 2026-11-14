@@ -157,6 +157,7 @@
       <span class="eyebrow" style="margin-top:24px">${esc(p.type)}</span>
       <h1>${esc(p.title)}</h1>
       <div class="case-skills">${p.skills.map((k) => skillById[k] ? `<button data-skill="${k}">${skillIcon(skillById[k])}${esc(skillById[k].name)}</button>` : "").join("")}</div>
+      ${p.summary && show(p.summary.result) ? `<div class="tldr"><div><b>Problem</b>${txt(p.summary.problem)}</div><div><b>What I did</b>${txt(p.summary.did)}</div><div><b>Result</b>${txt(p.summary.result)}</div></div>` : ""}
       <div class="case-meta">${meta}</div>
       ${sec("The challenge", para(p.problem))}
       ${sec("Approach", para(p.approach))}
