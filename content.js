@@ -102,9 +102,13 @@ const SITE = {
       "period": "Oct 2024 – Dec 2026",
       "place": "Darmstadt, Germany",
       "details": [
-        "Master's thesis submission in December 2026. TODO: thesis topic"
+        "Master's thesis: Optimizing Anticipatory Shipping: A Comparative Analysis of Forecasting Methods in Retail Supply Chains (submission December 2026)."
       ],
       "projects": [
+        {
+          "text": "Master's thesis: Optimizing Anticipatory Shipping: A Comparative Analysis of Forecasting Methods in Retail Supply Chains",
+          "link": "forecasting"
+        },
         {
           "text": "AI support in Project Risk Management",
           "link": "ai-risk"
@@ -116,10 +120,6 @@ const SITE = {
         {
           "text": "Intelligent Freight Wagon: How Data Collection Supports Sustainable Rail Transport",
           "link": "freight-wagon"
-        },
-        {
-          "text": "Optimizing Anticipatory Shipping: A Comparative Analysis of Forecasting Methods in Retail Supply Chains",
-          "link": "forecasting"
         }
       ]
     },
@@ -498,6 +498,54 @@ const SITE = {
   },
   "projects": [
     {
+      "id": "forecasting",
+      "title": "Optimizing anticipatory shipping: a comparative analysis of forecasting methods in retail supply chains",
+      "org": "TU Darmstadt · Master's thesis",
+      "period": "2026 · submission Dec 2026",
+      "type": "Academic",
+      "hue": 1,
+      "role": "Master's thesis",
+      "tools": [
+        "Python (pandas, statsmodels, XGBoost)",
+        "Google Colab",
+        "Time-series forecasting",
+        "Discrete-time simulation",
+        "Sensitivity analysis"
+      ],
+      "result": {
+        "value": "6 × 6",
+        "label": "forecast-method combinations tested per network leg"
+      },
+      "problem": "Anticipatory shipping means sending stock towards customers before they order, based on a forecast. For perishable products such as dairy with a 14-day shelf life, a wrong forecast is expensive in both directions: too little stock means emergency shipments and lost sales, too much means waste that cannot be returned. Most companies choose the forecasting method with the best accuracy score. My thesis asks whether that is the right choice: in a short-shelf-life network, does the bias of a forecast (does it tend to over- or under-forecast?) matter more for cost than its accuracy?",
+      "approach": "The setting is a national dairy distributor: central warehouse → distribution centre → a cluster of 10+ stores, with long lead times (3 days and 2 days) and two same-day rescue options, lateral transshipment between stores and emergency shipment from the distribution centre.\nRQ1, forecasting on real data: I built a Python pipeline on the public Favorita grocery dataset (dairy items, daily store-level sales, 2015–2017) and compared six methods: naive and moving-average baselines, Holt-Winters, SARIMA, a causal regression that includes promotions, and XGBoost. Beyond accuracy (MAE, RMSE), I measured the direction, size and structure of each method's bias, with actual sales kept strictly separate as ground truth.\nRQ2, simulation: I developed a discrete-time simulator of the network that ships stock by anticipatory shipping or pull, escalates shortages from transshipment to emergency shipment, and tracks holding, waste, stockout and shipping costs. Demand patterns come from the real data; prices, markdowns and deterioration come from literature and are tested with sensitivity analysis. I used it to test AS against pull on each leg of the network and to tune decision parameters such as allocation, placement and frequency.\nRQ3 and RQ4, evaluation and optimisation: each forecast method's bias is fed into the simulator to compare its accuracy ranking with its cost ranking, and a 6 × 6 grid tests every combination of methods on the two legs to find the best method per leg.",
+      "outcome": "What the thesis delivers: (1) A bias profile of six forecasting methods on real daily perishable demand, not just an accuracy table. (2) A reusable Python simulator of anticipatory shipping with lateral transshipment and emergency shipment in a three-echelon network. (3) A test of where anticipatory shipping beats pull: on the pooled central-warehouse leg or on the store leg. (4) A per-leg recommendation of which forecasting method minimises total cost, and whether it is the most accurate one. Final results follow with the submission in December 2026.",
+      "recommendations": [
+        "Judge forecasting methods by the cost of their errors, not only by accuracy, when products are perishable and penalties are asymmetric.",
+        "Choose the forecasting method per network leg instead of one method for the whole chain."
+      ],
+      "reflection": "I started this thesis with no Python experience. Building the pipeline step by step, from data cleaning to a full simulator, taught me as much about structured problem solving as about code.",
+      "skills": [
+        "python",
+        "forecasting",
+        "inventory",
+        "data",
+        "capacity"
+      ],
+      "gallery": [
+        {
+          "src": "assets/projects/thesis/1-network.png",
+          "title": "The network",
+          "text": "Anticipatory shipping (AS) or pull on each leg, with same-day rescue by lateral transshipment (LT) between stores and emergency shipment (ES) from the distribution centre."
+        },
+        {
+          "src": "assets/projects/thesis/2-pipeline.png",
+          "title": "The research pipeline",
+          "text": "From real sales data to forecast bias, a shipping simulation, and finally the best forecasting method per network leg."
+        }
+      ],
+      "galleryTitle": "Model & method"
+    },
+    {
       "id": "schedule-adherence",
       "title": "Engine build schedule adherence & order prioritisation",
       "org": "Personal project · simulated large-engine plant",
@@ -668,33 +716,6 @@ const SITE = {
       ],
       "galleryTitle": "From the thesis defence",
       "galleryCols": 2
-    },
-    {
-      "id": "forecasting",
-      "title": "Forecasting methods for anticipatory shipping",
-      "org": "TU Darmstadt · Master's project",
-      "period": "2025",
-      "type": "Academic",
-      "hue": 1,
-      "role": "TODO: solo or team role",
-      "tools": [
-        "TODO: Python / Excel"
-      ],
-      "result": {
-        "value": "TODO: X%",
-        "label": "TODO: accuracy gain of best method"
-      },
-      "problem": "Anticipatory shipping only pays off if retailers can predict demand before the order is placed. Which forecasting method is accurate enough?",
-      "approach": "Compared several forecasting methods on retail demand data. TODO: methods (e.g. ARIMA, exponential smoothing, ML), dataset size, error metrics (MAPE/RMSE).",
-      "outcome": "TODO: Which method performed best, by how much, and what it means for shipping decisions.",
-      "recommendations": [
-        "TODO"
-      ],
-      "reflection": "TODO",
-      "skills": [
-        "forecasting",
-        "data"
-      ]
     },
     {
       "id": "binding-tape",

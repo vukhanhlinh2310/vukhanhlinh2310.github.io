@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Thesis diagrams</title>
+<style>
+  :root { --rose:#B76E79; --roseD:#8E4B57; --rose2:#E3B5A4; --roseL:#F7E6E0; --cream:#FFFBF9; --ink:#2A1F22; --muted:#74636A; --line:#EEDDD7; --navy:#2C3A5C; --green:#5BAE7E; --amber:#E0A142; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family: Inter, "Segoe UI", system-ui, sans-serif; background:#ddd; color:var(--ink); }
+  .fig { width:1400px; background:var(--cream); margin:20px; border-radius:18px; padding:40px 48px; }
+  h1 { font-family: Georgia, serif; font-size:30px; }
+  .sub { color:var(--muted); margin:6px 0 26px; font-size:16px; }
+  svg text { font-family: Inter, "Segoe UI", system-ui, sans-serif; }
+  .legend { display:flex; gap:28px; margin-top:18px; font-size:14px; color:var(--muted); flex-wrap:wrap; }
+  .legend span { display:flex; align-items:center; gap:8px; }
+  .legend i { width:34px; height:4px; border-radius:2px; display:inline-block; }
+  .pipe { display:grid; grid-template-columns: 1fr 40px 1.15fr 40px 1.15fr 40px 1fr 40px 1fr; align-items:stretch; }
+  .box { background:#fff; border:1px solid var(--line); border-radius:18px; padding:20px 18px; box-shadow:0 14px 30px -22px rgba(142,75,87,.6); }
+  .box .k { font-size:12px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--rose); }
+  .box b { display:block; font-size:18px; margin:6px 0 10px; font-family: Georgia, serif; }
+  .box ul { list-style:none; display:grid; gap:7px; font-size:13.5px; color:#4a3b40; }
+  .box li::before { content:"• "; color:var(--rose); font-weight:800; }
+  .box.data { background:var(--roseL); border-color:var(--rose2); }
+  .box.out { background:linear-gradient(135deg,var(--rose),var(--rose2)); color:#fff; border:none; }
+  .box.out .k, .box.out ul, .box.out li::before { color:#fff; }
+  .ar { display:grid; place-items:center; color:var(--rose); font-size:28px; font-weight:800; }
+  .band { margin-top:22px; display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
+  .band div { border-radius:14px; padding:14px 18px; font-size:14px; }
+  .band .a { background:#EEF2F8; color:var(--navy); }
+  .band .b { background:var(--roseL); color:var(--roseD); }
+  .band b { display:block; font-size:12px; letter-spacing:.08em; text-transform:uppercase; margin-bottom:4px; }
+</style>
+</head>
+<body>
+
+<section class="fig" id="network">
+  <h1>The network: where anticipatory shipping happens</h1>
+  <p class="sub">Dairy products with a 14-day shelf life move from a central warehouse through a distribution centre to a cluster of stores.</p>
+  <svg viewBox="0 0 1300 520" width="1300" height="520" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="mR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B76E79"/></marker>
+      <marker id="mG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5BAE7E"/></marker>
+      <marker id="mA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E0A142"/></marker>
+      <linearGradient id="gr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B76E79"/><stop offset="1" stop-color="#E3B5A4"/></linearGradient>
+    </defs>
+    <!-- CW -->
+    <rect x="20" y="190" width="200" height="130" rx="20" fill="url(#gr)"/>
+    <text x="120" y="245" text-anchor="middle" fill="#fff" font-size="22" font-weight="800">Central</text>
+    <text x="120" y="272" text-anchor="middle" fill="#fff" font-size="22" font-weight="800">warehouse</text>
+    <text x="120" y="300" text-anchor="middle" fill="#fff" font-size="13" opacity=".9">CW</text>
+    <!-- CW -> DC -->
+    <line x1="228" y1="255" x2="452" y2="255" stroke="#B76E79" stroke-width="5" marker-end="url(#mR)"/>
+    <text x="340" y="230" text-anchor="middle" font-size="16" font-weight="700" fill="#8E4B57">AS or Pull</text>
+    <text x="340" y="285" text-anchor="middle" font-size="14" fill="#74636A">lead time 3 days</text>
+    <!-- DC -->
+    <rect x="460" y="190" width="200" height="130" rx="20" fill="#fff" stroke="#E3B5A4" stroke-width="3"/>
+    <text x="560" y="245" text-anchor="middle" font-size="22" font-weight="800" fill="#2A1F22">Distribution</text>
+    <text x="560" y="272" text-anchor="middle" font-size="22" font-weight="800" fill="#2A1F22">centre</text>
+    <text x="560" y="300" text-anchor="middle" font-size="13" fill="#74636A">DC · holds a stock pool</text>
+    <!-- DC -> stores -->
+    <g stroke="#B76E79" stroke-width="3.5" fill="none" marker-end="url(#mR)">
+      <path d="M668,240 C760,240 780,95 880,82"/>
+      <path d="M668,250 C770,250 790,190 880,186"/>
+      <path d="M668,262 C770,262 790,300 880,300"/>
+      <path d="M668,272 C760,272 780,420 880,420"/>
+    </g>
+    <text x="690" y="100" text-anchor="middle" font-size="16" font-weight="700" fill="#8E4B57">AS or Pull</text>
+    <text x="690" y="122" text-anchor="middle" font-size="14" fill="#74636A">lead time 2 days</text>
+    <!-- ES -->
+    <path d="M600,325 C620,470 760,480 880,448" stroke="#E0A142" stroke-width="3" stroke-dasharray="9 7" fill="none" marker-end="url(#mA)"/>
+    <text x="620" y="505" text-anchor="middle" font-size="15" font-weight="700" fill="#B37A1E">ES · emergency shipment, same day, highest cost</text>
+    <!-- stores -->
+    <g font-size="17" font-weight="700" fill="#2A1F22" text-anchor="middle">
+      <rect x="890" y="50" width="170" height="64" rx="16" fill="#fff" stroke="#EEDDD7" stroke-width="2"/><text x="975" y="89">Store 1</text>
+      <rect x="890" y="154" width="170" height="64" rx="16" fill="#fff" stroke="#EEDDD7" stroke-width="2"/><text x="975" y="193">Store 2</text>
+      <rect x="890" y="268" width="170" height="64" rx="16" fill="#fff" stroke="#EEDDD7" stroke-width="2"/><text x="975" y="307">Store 3</text>
+      <rect x="890" y="388" width="170" height="64" rx="16" fill="#fff" stroke="#EEDDD7" stroke-width="2"/><text x="975" y="427">… Store 10+</text>
+    </g>
+    <!-- LT -->
+    <g stroke="#5BAE7E" stroke-width="3" fill="none" marker-end="url(#mG)" marker-start="url(#mG)">
+      <path d="M1068,90 C1120,110 1120,165 1068,184"/>
+      <path d="M1068,196 C1120,220 1120,275 1068,296"/>
+    </g>
+    <text x="1135" y="190" font-size="15" font-weight="700" fill="#2E7D4F">LT · lateral</text>
+    <text x="1135" y="210" font-size="15" font-weight="700" fill="#2E7D4F">transshipment</text>
+    <text x="1135" y="232" font-size="13" fill="#74636A">between stores,</text>
+    <text x="1135" y="250" font-size="13" fill="#74636A">same day, cheap</text>
+    <!-- demand -->
+    <text x="1060" y="485" text-anchor="middle" font-size="14" fill="#74636A">Daily demand from real sales data</text>
+  </svg>
+  <div class="legend">
+    <span><i style="background:#B76E79"></i>Normal shipping: <b>&nbsp;AS</b>&nbsp;(shipper forecasts and ships ahead) or <b>&nbsp;Pull</b>&nbsp;(order on request)</span>
+    <span><i style="background:#5BAE7E"></i>Rescue 1: lateral transshipment</span>
+    <span><i style="background:#E0A142"></i>Rescue 2: emergency shipment</span>
+  </div>
+</section>
+
+<section class="fig" id="pipeline">
+  <h1>From forecast bias to shipping cost</h1>
+  <p class="sub">Two pipelines: real data for the forecasting comparison, a simulation for the shipping decisions.</p>
+  <div class="pipe">
+    <div class="box data"><div class="k">Data</div><b>Favorita grocery sales</b>
+      <ul><li>Public Kaggle dataset</li><li>Dairy family, perishable items</li><li>Daily store-level sales, 2015–2017</li><li>Store, cluster and city structure</li></ul></div>
+    <div class="ar">→</div>
+    <div class="box"><div class="k">RQ1 · Forecasting</div><b>Six methods, compared on bias</b>
+      <ul><li>Naive &amp; moving average</li><li>Holt-Winters, SARIMA</li><li>Causal regression (promotions)</li><li>XGBoost</li><li>Direction, size and structure of bias</li></ul></div>
+    <div class="ar">→</div>
+    <div class="box"><div class="k">RQ2 · Simulation</div><b>Anticipatory shipping model</b>
+      <ul><li>AS → LT → ES escalation</li><li>Allocation, placement, frequency</li><li>Holding, waste, stockout &amp; shipping costs</li><li>AS vs Pull per network leg</li></ul></div>
+    <div class="ar">→</div>
+    <div class="box"><div class="k">RQ3 · Evaluation</div><b>Accuracy vs. cost</b>
+      <ul><li>Is the most accurate method also the cheapest?</li><li>Which bias components and which echelon drive cost?</li></ul></div>
+    <div class="ar">→</div>
+    <div class="box out"><div class="k">RQ4 · Optimisation</div><b>Best method per leg</b>
+      <ul><li>6 × 6 grid of method combinations</li><li>CW → DC and DC → store</li><li>Lowest total cost at target service</li></ul></div>
+  </div>
+  <div class="band">
+    <div class="a"><b>Pipeline A · real data only</b>Forecasts are trained and tested on real sales, with actual sales kept strictly separate as ground truth to avoid data leakage.</div>
+    <div class="b"><b>Pipeline B · hybrid simulation</b>Demand patterns and network come from the real data; prices, markdowns and deterioration are set from literature and tested with sensitivity analysis.</div>
+  </div>
+</section>
+
+</body>
+</html>
