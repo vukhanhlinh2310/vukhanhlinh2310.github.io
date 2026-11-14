@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Risk platform mockups</title>
+<style>
+  :root { --navy:#1F2A44; --navy2:#2C3A5C; --rose:#B76E79; --rose2:#E3B5A4; --roseL:#F7E6E0; --bg:#F6F4F2; --card:#fff; --ink:#22202A; --muted:#757083; --line:#E7E2E0;
+          --hi:#D9534F; --med:#F0AD4E; --lo:#5BAE7E; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family: Inter, "Segoe UI", system-ui, sans-serif; background:#ddd; color:var(--ink); }
+  .frame { width:1400px; height:800px; background:var(--bg); display:grid; grid-template-columns:230px 1fr; grid-template-rows:64px 1fr; overflow:hidden; margin:20px; border-radius:18px; }
+  .top { grid-column:1/-1; background:var(--navy); display:flex; align-items:center; gap:22px; padding:0 24px; color:#fff; }
+  .brand { background:#fff; color:var(--navy); font-weight:800; letter-spacing:.06em; font-size:13px; padding:9px 18px; border-radius:999px; }
+  .crumb { font-size:15px; opacity:.9; }
+  .crumb b { opacity:1; }
+  .search { margin-left:auto; background:rgba(255,255,255,.12); border-radius:999px; padding:9px 18px; width:260px; font-size:13px; opacity:.85; }
+  .avatar { width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,var(--rose),var(--rose2)); display:grid; place-items:center; font-weight:700; font-size:13px; }
+  .side { background:var(--navy2); color:#fff; padding:22px 16px; display:flex; flex-direction:column; gap:6px; }
+  .side .pj { background:rgba(255,255,255,.1); border-radius:12px; padding:12px; margin-bottom:14px; font-size:13px; }
+  .side .pj b { display:block; font-size:15px; margin-top:2px; }
+  .side a { font-size:14px; padding:10px 12px; border-radius:10px; opacity:.75; }
+  .side a.on { background:var(--rose); opacity:1; font-weight:600; }
+  .side .status { margin-top:auto; font-size:12px; opacity:.8; }
+  .side .pill { display:inline-block; margin-top:6px; background:var(--lo); padding:4px 10px; border-radius:999px; font-weight:600; opacity:1; }
+  main { padding:24px 28px; display:flex; flex-direction:column; gap:18px; overflow:hidden; }
+  .head { display:flex; align-items:center; justify-content:space-between; }
+  .head h1 { font-size:24px; }
+  .stepper { display:flex; gap:6px; font-size:13px; }
+  .stepper span { padding:8px 14px; border-radius:999px; background:#fff; border:1px solid var(--line); color:var(--muted); }
+  .stepper span.on { background:var(--navy); border-color:var(--navy); color:#fff; font-weight:600; }
+  .stepper span.done { background:var(--roseL); border-color:var(--rose2); color:var(--rose); font-weight:600; }
+  .grid { display:grid; gap:18px; flex:1; min-height:0; }
+  .card { background:var(--card); border-radius:16px; border:1px solid var(--line); padding:20px; }
+  .card h3 { font-size:15px; margin-bottom:14px; }
+  label { font-size:12px; color:var(--muted); font-weight:600; display:block; margin-bottom:5px; }
+  .input { border:1px solid var(--line); border-radius:10px; padding:10px 12px; font-size:14px; margin-bottom:14px; background:#FCFBFA; }
+  .chips { display:flex; flex-wrap:wrap; gap:8px; }
+  .chip { font-size:12px; padding:6px 12px; border-radius:999px; background:#F1EEEC; color:var(--muted); font-weight:600; }
+  .chip.on { background:var(--navy); color:#fff; }
+  .chip.r { background:var(--roseL); color:var(--rose); }
+  .drop { border:2px dashed var(--rose2); border-radius:14px; background:var(--roseL); padding:30px; text-align:center; color:var(--rose); font-weight:600; font-size:14px; }
+  .drop small { display:block; color:var(--muted); font-weight:500; margin-top:4px; }
+  .files { display:flex; gap:10px; margin-top:14px; }
+  .file { flex:1; border:1px solid var(--line); border-radius:10px; padding:10px; font-size:12px; display:flex; gap:8px; align-items:center; }
+  .file i { width:26px; height:30px; border-radius:5px; display:grid; place-items:center; color:#fff; font-style:normal; font-size:10px; font-weight:800; }
+  .assist { background:#fff; border-radius:16px; border:1px solid var(--line); display:flex; flex-direction:column; overflow:hidden; }
+  .assist .ah { background:linear-gradient(135deg,var(--rose),var(--rose2)); color:#fff; padding:14px 16px; font-weight:700; font-size:14px; display:flex; gap:8px; align-items:center; }
+  .assist .body { padding:14px; display:flex; flex-direction:column; gap:10px; flex:1; }
+  .msg { font-size:13px; line-height:1.45; padding:10px 12px; border-radius:12px; max-width:92%; }
+  .msg.ai { background:var(--roseL); color:var(--ink); }
+  .msg.me { background:var(--navy); color:#fff; align-self:flex-end; }
+  .msg a { color:var(--rose); font-weight:700; text-decoration:none; }
+  .typing { margin:12px; border:1px solid var(--line); border-radius:999px; padding:10px 14px; font-size:13px; color:var(--muted); display:flex; justify-content:space-between; }
+  .typing b { background:var(--rose); color:#fff; border-radius:50%; width:22px; height:22px; display:grid; place-items:center; font-size:12px; }
+  .acc { border:1px solid var(--line); border-radius:12px; padding:12px 14px; display:flex; align-items:center; gap:10px; font-size:14px; font-weight:600; background:#fff; }
+  .acc .ic { width:28px; height:28px; border-radius:8px; background:var(--roseL); color:var(--rose); display:grid; place-items:center; font-size:14px; }
+  .acc .cnt { margin-left:auto; font-size:12px; color:var(--muted); font-weight:500; }
+  .acc.open { flex-direction:column; align-items:stretch; border-color:var(--rose2); box-shadow:0 6px 20px -12px rgba(183,110,121,.6); }
+  .acc.open .row { display:flex; align-items:center; gap:10px; }
+  .mini { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-top:12px; }
+  .mini div { border:1px solid var(--line); border-radius:8px; padding:8px 10px; font-size:12px; font-weight:500; }
+  .mini div span { display:block; font-size:10px; color:var(--muted); font-weight:700; text-transform:uppercase; letter-spacing:.06em; }
+  table { width:100%; border-collapse:separate; border-spacing:0; font-size:13px; }
+  th { text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); padding:10px; border-bottom:2px solid var(--line); }
+  td { padding:12px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  .exp { display:inline-block; min-width:38px; text-align:center; padding:4px 8px; border-radius:8px; font-weight:800; color:#fff; }
+  .hi { background:var(--hi); } .me2 { background:var(--med); } .lo { background:var(--lo); }
+  .tag { font-size:11px; font-weight:700; padding:3px 8px; border-radius:999px; }
+  .btns { display:flex; gap:8px; }
+  .btn { font-size:12px; font-weight:700; padding:6px 10px; border-radius:8px; border:1px solid var(--line); background:#fff; white-space:nowrap; }
+  .btn.p { background:var(--navy); color:#fff; border-color:var(--navy); }
+  .catnav { display:flex; flex-direction:column; gap:6px; }
+  .catnav div { font-size:13px; font-weight:600; padding:10px 12px; border-radius:10px; color:var(--muted); display:flex; justify-content:space-between; }
+  .catnav div.on { background:var(--navy); color:#fff; }
+  .catnav em { font-style:normal; font-size:11px; background:rgba(0,0,0,.08); border-radius:999px; padding:1px 7px; }
+  .catnav div.on em { background:rgba(255,255,255,.2); }
+  .kpi { display:flex; flex-direction:column; align-items:center; justify-content:center; }
+  .gauge { width:150px; height:150px; border-radius:50%; background:conic-gradient(var(--med) 0 58%, #F1EEEC 58% 100%); display:grid; place-items:center; }
+  .gauge div { width:112px; height:112px; border-radius:50%; background:#fff; display:grid; place-items:center; text-align:center; font-weight:800; font-size:20px; }
+  .gauge small { display:block; font-size:11px; color:var(--muted); font-weight:600; }
+  .donut { width:150px; height:150px; border-radius:50%; background:conic-gradient(var(--hi) 0 24%, var(--med) 24% 61%, var(--lo) 61% 100%); display:grid; place-items:center; }
+  .donut div { width:90px; height:90px; border-radius:50%; background:#fff; display:grid; place-items:center; font-weight:800; font-size:22px; }
+  .legend { display:flex; gap:12px; font-size:12px; color:var(--muted); margin-top:12px; }
+  .legend i { display:inline-block; width:10px; height:10px; border-radius:3px; margin-right:5px; vertical-align:-1px; }
+  .heat { display:grid; grid-template-columns:50px repeat(3,1fr); gap:5px; font-size:12px; }
+  .heat div { border-radius:8px; height:44px; display:grid; place-items:center; font-weight:800; color:#fff; }
+  .heat .ax { background:none; color:var(--muted); font-weight:600; height:auto; }
+  .bars { display:flex; flex-direction:column; gap:9px; }
+  .bar { display:grid; grid-template-columns:150px 1fr 30px; align-items:center; gap:10px; font-size:13px; }
+  .bar .t { display:flex; height:16px; border-radius:6px; overflow:hidden; }
+  .bar .n { color:var(--muted); font-size:12px; text-align:right; }
+  /* flow */
+  .flowframe { grid-template-columns:1fr; }
+  .flow { display:grid; grid-template-columns: 1fr 60px 1.1fr 60px 1.1fr 60px 1.2fr 60px 1fr; align-items:center; padding:60px 50px; gap:0; }
+  .node { background:#fff; border:1px solid var(--line); border-radius:18px; padding:22px 18px; text-align:center; box-shadow:0 14px 30px -20px rgba(31,42,68,.5); }
+  .node .ic2 { width:52px; height:52px; border-radius:14px; margin:0 auto 12px; display:grid; place-items:center; color:#fff; font-weight:800; font-size:18px; }
+  .node b { display:block; font-size:16px; margin-bottom:6px; }
+  .node span { font-size:12.5px; color:var(--muted); line-height:1.45; display:block; }
+  .stack { display:flex; flex-direction:column; gap:14px; }
+  .arrow { height:3px; background:var(--rose2); position:relative; margin:0 6px; }
+  .arrow::after { content:""; position:absolute; right:-2px; top:-6px; border-left:12px solid var(--rose2); border-top:7.5px solid transparent; border-bottom:7.5px solid transparent; }
+  .steps-row { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; padding:0 50px; }
+  .stp { background:var(--roseL); border-radius:14px; padding:16px; font-size:13px; color:var(--ink); }
+  .stp b { color:var(--rose); display:block; font-size:12px; letter-spacing:.08em; text-transform:uppercase; margin-bottom:4px; }
+  .ftitle { padding:40px 50px 0; }
+  .ftitle h1 { font-size:28px; }
+  .ftitle p { color:var(--muted); margin-top:6px; }
+</style>
+</head>
+<body>
+
+<!-- 1 · Project overview -->
+<section class="frame" id="s1">
+  <div class="top"><span class="brand">PHARMA CO.</span><span class="crumb">Projects › New project entry › <b>Overview</b></span><span class="search">Search projects, risks, lessons…</span><span class="avatar">LV</span></div>
+  <aside class="side">
+    <div class="pj">Project<b>PJ-00123 · Product XYZ</b></div>
+    <a class="on">Overview</a><a>Project description</a><a>Risk analysis</a><a>Dashboard</a><a>Lessons learned</a>
+    <div class="status">Status<br><span class="pill">On track · Planning</span></div>
+  </aside>
+  <main>
+    <div class="head"><h1>Register a new project</h1><div class="stepper"><span class="on">1 Input</span><span>2 Match</span><span>3 Review</span><span>4 Report</span></div></div>
+    <div class="grid" style="grid-template-columns:1.2fr 1fr;">
+      <div class="card">
+        <h3>Basic information</h3>
+        <label>Project ID</label><div class="input">PJ-00123</div>
+        <label>Project name</label><div class="input">Product XYZ – new oral formulation</div>
+        <label>Description</label><div class="input" style="height:74px">Develop product X for target customer group Z, using supplier S1 for the main ingredient.</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px"><div><label>Start</label><div class="input">01.01.2027</div></div><div><label>Planned launch</label><div class="input">30.06.2028</div></div></div>
+        <label>Phase</label><div class="chips"><span class="chip">Initiation</span><span class="chip on">In R&amp;D</span><span class="chip">Scale-up</span><span class="chip">Launched</span></div>
+      </div>
+      <div class="card">
+        <h3>Already have a project description?</h3>
+        <div class="drop">Drop a PDF or Excel file here<small>The fields are filled in automatically and checked by the assistant</small></div>
+        <div class="files">
+          <div class="file"><i style="background:#C0392B">PDF</i>Project_charter.pdf</div>
+          <div class="file"><i style="background:#1E7145">XLS</i>Risk_register_v2.xlsx</div>
+        </div>
+        <h3 style="margin-top:22px">Next step</h3>
+        <p style="font-size:13px;color:var(--muted);line-height:1.5">Describe the project by category. The system then searches past projects for similar risks and lessons learned.</p>
+        <div style="margin-top:16px"><span class="btn p" style="padding:10px 18px;font-size:13px">Continue to description →</span></div>
+      </div>
+    </div>
+  </main>
+</section>
+
+<!-- 2 · Description by category -->
+<section class="frame" id="s2">
+  <div class="top"><span class="brand">PHARMA CO.</span><span class="crumb">Projects › PJ-00123 › <b>Project description</b></span><span class="search">Search projects, risks, lessons…</span><span class="avatar">LV</span></div>
+  <aside class="side">
+    <div class="pj">Project<b>PJ-00123 · Product XYZ</b></div>
+    <a>Overview</a><a class="on">Project description</a><a>Risk analysis</a><a>Dashboard</a><a>Lessons learned</a>
+    <div class="status">Status<br><span class="pill">On track · Planning</span></div>
+  </aside>
+  <main>
+    <div class="head"><h1>Describe the project by category</h1><div class="stepper"><span class="on">1 Input</span><span>2 Match</span><span>3 Review</span><span>4 Report</span></div></div>
+    <div class="grid" style="grid-template-columns:1fr 330px;">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div class="acc"><span class="ic">⚗</span>Ingredients &amp; formulation<span class="cnt">3 ingredients · I1, I2, I3</span></div>
+        <div class="acc open">
+          <div class="row"><span class="ic">⛟</span>Supplier<span class="cnt">2 suppliers</span></div>
+          <div class="mini">
+            <div><span>Country</span>C1 – India</div><div><span>Supplier</span>S1</div><div><span>Ingredient</span>I1 (API)</div>
+            <div><span>Country</span>C2 – Germany</div><div><span>Supplier</span>S2</div><div><span>Ingredient</span>I2, I3</div>
+          </div>
+        </div>
+        <div class="acc"><span class="ic">⚖</span>Regulatory requirements<span class="cnt">EU, US</span></div>
+        <div class="acc"><span class="ic">◈</span>IP / patent landscape<span class="cnt">not started</span></div>
+        <div class="acc"><span class="ic">▣</span>Packaging material<span class="cnt">blister, 30 units</span></div>
+        <div class="acc"><span class="ic">☺</span>Customer requirements<span class="cnt">2 items</span></div>
+        <div class="acc"><span class="ic">⚙</span>Manufacturing process &amp; capacity<span class="cnt">site M2</span></div>
+      </div>
+      <div class="assist">
+        <div class="ah">✦ Assistant</div>
+        <div class="body">
+          <div class="msg ai">You mentioned <b>I1</b> in the description, so I added it to Ingredients.</div>
+          <div class="msg ai">Project <b>PJ-00003</b> used the same supplier S1 for I1 and recorded 2 supply risks. <a>View case →</a></div>
+          <div class="msg ai">Regulatory: 4 past projects for the US market. Want me to pull their lessons learned?</div>
+          <div class="msg me">Yes, show them in the risk analysis.</div>
+        </div>
+        <div class="typing">Ask about past projects…<b>↑</b></div>
+      </div>
+    </div>
+  </main>
+</section>
+
+<!-- 3 · Matched historical risks -->
+<section class="frame" id="s3">
+  <div class="top"><span class="brand">PHARMA CO.</span><span class="crumb">Projects › PJ-00123 › <b>Risk analysis</b></span><span class="search">Search projects, risks, lessons…</span><span class="avatar">LV</span></div>
+  <aside class="side">
+    <div class="pj">Project<b>PJ-00123 · Product XYZ</b></div>
+    <a>Overview</a><a>Project description</a><a class="on">Risk analysis</a><a>Dashboard</a><a>Lessons learned</a>
+    <div class="status">Status<br><span class="pill">On track · Planning</span></div>
+  </aside>
+  <main>
+    <div class="head"><h1>Similar risks from past projects</h1><div class="stepper"><span class="done">1 Input</span><span class="on">2 Match</span><span>3 Review</span><span>4 Report</span></div></div>
+    <div class="grid" style="grid-template-columns:200px 1fr;">
+      <div class="catnav">
+        <div>Ingredients <em>4</em></div><div class="on">Supplier <em>3</em></div><div>Regulatory <em>5</em></div><div>IP <em>1</em></div><div>Packaging <em>2</em></div><div>Customer <em>2</em></div><div>Manufacturing <em>3</em></div>
+      </div>
+      <div class="card" style="padding:8px 14px">
+        <table>
+          <tr><th>ID</th><th>From project</th><th>Risk description</th><th>Impact</th><th>Prob.</th><th>Exposure</th><th>Strategy</th><th>Mitigation</th><th></th></tr>
+          <tr><td><b>IS-01</b></td><td>PJ-00003</td><td>Supplier S1 (C1) delivers API late due to export licence delays</td><td>High</td><td>40%</td><td><span class="exp hi">30</span></td><td><span class="tag" style="background:#FBE3E2;color:var(--hi)">Mitigate</span></td><td>Qualify second source; 8 weeks safety stock</td><td><div class="btns"><span class="btn">Customise</span><span class="btn p">+ Add</span></div></td></tr>
+          <tr><td><b>IS-02</b></td><td>PJ-00017</td><td>Quality deviation in first batches from a new supplier in country C1</td><td>Medium</td><td>20%</td><td><span class="exp me2">12</span></td><td><span class="tag" style="background:#FDF0DC;color:#B9770E">Mitigate</span></td><td>Joint audit before first order</td><td><div class="btns"><span class="btn">Customise</span><span class="btn p">+ Add</span></div></td></tr>
+          <tr><td><b>IS-03</b></td><td>PJ-00021</td><td>Price increase of ingredient I2 above budget</td><td>Low</td><td>30%</td><td><span class="exp lo">6</span></td><td><span class="tag" style="background:#E3F2E9;color:#2E7D4F">Accept</span></td><td>Monitor quarterly</td><td><div class="btns"><span class="btn">Customise</span><span class="btn p">+ Add</span></div></td></tr>
+        </table>
+        <p style="font-size:12px;color:var(--muted);padding:14px 6px 8px">Found by semantic search: same supplier S1, other suppliers in country C1, and the same ingredient. Click an ID to open the original project and its lessons learned.</p>
+      </div>
+    </div>
+  </main>
+</section>
+
+<!-- 4 · Dashboard -->
+<section class="frame" id="s4">
+  <div class="top"><span class="brand">PHARMA CO.</span><span class="crumb">Projects › PJ-00123 › <b>Dashboard</b></span><span class="search">Search projects, risks, lessons…</span><span class="avatar">LV</span></div>
+  <aside class="side">
+    <div class="pj">Project<b>PJ-00123 · Product XYZ</b></div>
+    <a>Overview</a><a>Project description</a><a>Risk analysis</a><a class="on">Dashboard</a><a>Lessons learned</a>
+    <div class="status">Status<br><span class="pill">On track · Planning</span></div>
+  </aside>
+  <main>
+    <div class="head"><h1>Overall risk assessment</h1><div class="stepper"><span class="done">1 Input</span><span class="done">2 Match</span><span class="done">3 Review</span><span class="on">4 Report</span></div></div>
+    <div class="grid" style="grid-template-columns:repeat(3,1fr) 300px; grid-template-rows:auto 1fr;">
+      <div class="card kpi"><h3 style="align-self:flex-start">Overall risk</h3><div class="gauge"><div>Medium<small>score 58 / 100</small></div></div></div>
+      <div class="card kpi"><h3 style="align-self:flex-start">Rating breakdown</h3><div class="donut"><div>21</div></div><div class="legend"><span><i style="background:var(--hi)"></i>High 5</span><span><i style="background:var(--med)"></i>Med 8</span><span><i style="background:var(--lo)"></i>Low 8</span></div></div>
+      <div class="card"><h3>Heat map</h3>
+        <div class="heat">
+          <span class="ax">High</span><div style="background:var(--med)">3</div><div style="background:var(--hi)">4</div><div style="background:var(--hi)">1</div>
+          <span class="ax">Med</span><div style="background:var(--lo)">2</div><div style="background:var(--med)">4</div><div style="background:var(--med)">1</div>
+          <span class="ax">Low</span><div style="background:var(--lo)">3</div><div style="background:var(--lo)">2</div><div style="background:var(--lo)">1</div>
+          <span></span><span class="ax">Low</span><span class="ax">Medium</span><span class="ax">High</span>
+        </div>
+        <p style="font-size:11px;color:var(--muted);margin-top:6px;text-align:right">probability → · impact ↑</p>
+      </div>
+      <div class="assist" style="grid-column:4; grid-row:1/3">
+        <div class="ah">✦ Assistant</div>
+        <div class="body">
+          <div class="msg ai">Supplier risks make up <b>40% of the high risks</b>. Most come from country C1.</div>
+          <div class="msg me">Which suppliers contribute most?</div>
+          <div class="msg ai">S1 (2 high risks). In past projects, a second source reduced delays by 6 weeks on average. <a>Open report →</a></div>
+        </div>
+        <div class="typing">Ask about this project…<b>↑</b></div>
+      </div>
+      <div class="card" style="grid-column:1/4"><h3>Risks by category</h3>
+        <div class="bars">
+          <div class="bar">Supplier<div class="t"><i style="width:30%;background:var(--lo)"></i><i style="width:20%;background:var(--med)"></i><i style="width:25%;background:var(--hi)"></i></div><span class="n">5</span></div>
+          <div class="bar">Regulatory<div class="t"><i style="width:28%;background:var(--lo)"></i><i style="width:30%;background:var(--med)"></i><i style="width:12%;background:var(--hi)"></i></div><span class="n">5</span></div>
+          <div class="bar">Ingredients<div class="t"><i style="width:25%;background:var(--lo)"></i><i style="width:18%;background:var(--med)"></i><i style="width:10%;background:var(--hi)"></i></div><span class="n">4</span></div>
+          <div class="bar">Manufacturing<div class="t"><i style="width:22%;background:var(--lo)"></i><i style="width:16%;background:var(--med)"></i></div><span class="n">3</span></div>
+          <div class="bar">Packaging<div class="t"><i style="width:18%;background:var(--lo)"></i><i style="width:10%;background:var(--med)"></i></div><span class="n">2</span></div>
+          <div class="bar">Customer<div class="t"><i style="width:14%;background:var(--lo)"></i><i style="width:10%;background:var(--med)"></i></div><span class="n">2</span></div>
+        </div>
+      </div>
+    </div>
+  </main>
+</section>
+
+<!-- 5 · Assistant -->
+<section class="frame" id="s5" style="grid-template-columns:1fr; place-items:center; background:linear-gradient(135deg,#E9E6EE,#F6EAE6)">
+  <div class="assist" style="width:560px; grid-row:1/3; box-shadow:0 30px 60px -30px rgba(31,42,68,.55)">
+    <div class="ah" style="font-size:16px;padding:18px 20px">✦ Lessons-learned assistant <span style="margin-left:auto;opacity:.8;font-weight:500;font-size:12px">connected to 148 past projects</span></div>
+    <div class="body" style="padding:22px;gap:14px">
+      <div class="msg me" style="font-size:15px">Have we had similar supplier risks in past projects?</div>
+      <div class="msg ai" style="font-size:15px">Yes. In <b>2 past projects</b>, delays came from supplier issues in country C2.<br><br>Recommended mitigation:<div class="chips" style="margin-top:8px"><span class="chip r">Dual sourcing</span><span class="chip r">Earlier supplier involvement</span></div></div>
+      <div class="msg me" style="font-size:15px">What about delivery delays for critical components?</div>
+      <div class="msg ai" style="font-size:15px">Several projects reported lead-time deviations for critical parts, on average <b>5 weeks</b>. Would you like to review the <a>report</a> on this risk?</div>
+    </div>
+    <div class="typing" style="margin:16px 20px 20px;font-size:14px">Type a message…<b>↑</b></div>
+  </div>
+</section>
+
+<!-- 6 · Platform flow -->
+<section class="frame flowframe" id="s6" style="grid-template-rows:auto auto auto; background:#fff; height:640px; align-content:start">
+  <div class="ftitle"><h1>How the platform is built on existing tools</h1><p>No new software: the framework reuses the Microsoft 365 stack the company already runs.</p></div>
+  <div class="flow">
+    <div class="stack">
+      <div class="node"><div class="ic2" style="background:#1E7145">XLS</div><b>Excel risk registers</b><span>existing project files</span></div>
+      <div class="node"><div class="ic2" style="background:#2B579A">DOC</div><b>Word &amp; PDF</b><span>project descriptions</span></div>
+    </div>
+    <div class="arrow"></div>
+    <div class="node"><div class="ic2" style="background:#0B6A78">SP</div><b>SharePoint</b><span>upload &amp; document storage</span></div>
+    <div class="arrow"></div>
+    <div class="node"><div class="ic2" style="background:#0F6CBD">PA</div><b>Power Automate</b><span>extracts fields, checks data quality, removes duplicates</span></div>
+    <div class="arrow"></div>
+    <div class="node" style="border-color:var(--rose2)"><div class="ic2" style="background:linear-gradient(135deg,var(--rose),var(--rose2))">DB</div><b>Central risk &amp; lessons database</b><span>Dataverse · one record per project, linked to risks, mitigations and lessons</span></div>
+    <div class="arrow"></div>
+    <div class="stack">
+      <div class="node"><div class="ic2" style="background:#6E3FA3">AI</div><b>Copilot</b><span>semantic search &amp; assistant</span></div>
+      <div class="node"><div class="ic2" style="background:#C9A227">BI</div><b>Power BI</b><span>risk dashboards</span></div>
+    </div>
+  </div>
+  <div class="steps-row">
+    <div class="stp"><b>Phase 1</b>Central database &amp; data-quality rules</div>
+    <div class="stp"><b>Phase 2</b>Automated import of existing Excel registers</div>
+    <div class="stp"><b>Phase 3</b>AI search &amp; assistant for project managers</div>
+    <div class="stp"><b>Phase 4</b>Dashboards, then external AI services</div>
+  </div>
+</section>
+
+</body>
+</html>

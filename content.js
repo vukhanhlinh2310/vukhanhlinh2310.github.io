@@ -79,9 +79,9 @@ const SITE = {
       "link": "#experience/honda"
     },
     {
-      "name": "Vietnam Grand Prix",
+      "name": "Formula 1 Vietnam Grand Prix",
       "url": "",
-      "logo": "",
+      "logo": "assets/logos/f1-vietnam.png",
       "badge": "F1",
       "sub": "Operations Intern",
       "link": "#experience/f1"
@@ -261,7 +261,7 @@ const SITE = {
           "link": "digital-workshop"
         },
         {
-          "text": "Measuring the effectiveness of quick-changeover activities and proposing a new problem escalation map",
+          "text": "Proposing quick changeover activities and a problem escalation map, inspired by Formula 1 pit stops",
           "link": "quick-changeover"
         },
         {
@@ -310,7 +310,7 @@ const SITE = {
     },
     {
       "id": "f1",
-      "logo": "",
+      "logo": "assets/logos/f1-vietnam.png",
       "badge": "F1",
       "url": "",
       "role": "Operations Intern",
@@ -338,7 +338,7 @@ const SITE = {
       ],
       "projects": [
         {
-          "text": "The pit-stop logic I saw here later inspired my quick changeover (QCO) workshop at Crystal Martin",
+          "text": "The pit-stop logic I saw here later became the idea behind my quick changeover project at Crystal Martin",
           "link": "quick-changeover"
         }
       ]
@@ -524,10 +524,6 @@ const SITE = {
         "Use the priority score in the daily planning meeting to decide expediting and test-bench slots."
       ],
       "reflection": "A KPI only helps when it points to a cause. Pairing adherence with a Pareto of delay days turned a red number into two concrete levers.",
-      "next": [
-        "Connect the score to live ERP data (order status, material availability).",
-        "Track adherence per engine family and customer segment."
-      ],
       "skills": [
         "production",
         "data",
@@ -561,10 +557,6 @@ const SITE = {
         "Review test cycle times of the largest engines, which use the most bench hours."
       ],
       "reflection": "Rough-cut planning is simple maths, but it moves the capacity conversation months earlier, while options are still cheap.",
-      "next": [
-        "Add long-lead material constraints to the capacity check.",
-        "Build a scenario slider in Excel for the S&OP meeting."
-      ],
       "skills": [
         "capacity",
         "production",
@@ -599,10 +591,6 @@ const SITE = {
         "Review safety stock quarterly as demand variability changes."
       ],
       "reflection": "Safety stock is a policy decision, not just a formula: the service level per class is where business priorities enter the numbers.",
-      "next": [
-        "Add open purchase orders to the projection.",
-        "Show stock coverage in a weekly planner dashboard."
-      ],
       "skills": [
         "inventory",
         "data",
@@ -638,10 +626,6 @@ const SITE = {
         "Negotiate long-term carrier terms for the milk-run route."
       ],
       "reflection": "Most of the saving came from questioning a routine that everyone accepted: splitting shipments by urgency looked logical order by order, but cost more across the whole network.",
-      "next": [
-        "Track back-order age and release cost as weekly KPIs.",
-        "Re-run the analysis with a full year of data after the milk run starts."
-      ],
       "skills": [
         "sap",
         "inventory",
@@ -687,9 +671,6 @@ const SITE = {
         "TODO"
       ],
       "reflection": "TODO",
-      "next": [
-        "TODO"
-      ],
       "skills": [
         "forecasting",
         "data"
@@ -719,9 +700,6 @@ const SITE = {
         "Roll the standardised method out to similar operations on other lines."
       ],
       "reflection": "Operators knew where the waste was; the project worked because the fix was designed with them, not for them.",
-      "next": [
-        "TODO"
-      ],
       "skills": [
         "process",
         "lean",
@@ -753,10 +731,6 @@ const SITE = {
         "Automate the export step next, so the database refreshes without copy-paste."
       ],
       "reflection": "The value was not the charts but the structure behind them: once the data had one clean format, every new question became a formula instead of a new manual count.",
-      "next": [
-        "Move the logic to Power BI for automatic refresh and sharing.",
-        "Add a simple forecast of openings before the summer peak."
-      ],
       "skills": [
         "excel",
         "data"
@@ -810,9 +784,6 @@ const SITE = {
         "Keep a single owner across partner, compliance and IT workstreams for future launches."
       ],
       "reflection": "A launch is a supply chain of decisions: every hand-off between teams is where delays hide.",
-      "next": [
-        "TODO"
-      ],
       "skills": [
         "pm",
         "partner",
@@ -843,9 +814,6 @@ const SITE = {
         "TODO"
       ],
       "reflection": "TODO",
-      "next": [
-        "TODO"
-      ],
       "skills": [
         "partner",
         "stakeholder",
@@ -871,16 +839,12 @@ const SITE = {
       },
       "problem": "Order picking is the most labour- and cost-intensive warehouse process. Decisions such as how many pickers or robots to deploy, how to design stations and how to size internal transport are usually made with slow simulations or trial and error. Can queuing theory answer them faster?",
       "approach": "Systematic literature review following PRISMA 2020: 341 records from academic databases, screened down to 24 studies that apply queuing models to warehouse order picking, grouped into picker allocation and staffing, picking station design, and internal transport.",
-      "outcome": "Main findings: (1) Staffing: queuing networks reveal a saturation point where extra pickers, robots or vehicles stop adding throughput and waiting lines take over, replacing trial and error with a clear threshold. (2) Station and layout design: analytical models evaluate thousands of buffer and zone configurations in seconds, giving simple rules such as keeping merge points below a utilisation limit and buffers small. (3) Transport and flow control: models give results close to simulation for fleet and buffer sizing at a fraction of the effort, enabling quick what-if analysis. The main gap: most models assume constant demand, while real warehouses face peaks such as sales events and late cut-offs.",
+      "outcome": "Main findings: (1) Staffing: queuing networks reveal a saturation point where extra pickers, robots or vehicles stop adding throughput and waiting lines take over, replacing trial and error with a clear threshold. (2) Station and layout design: analytical models evaluate thousands of buffer and zone configurations in seconds, giving simple rules such as keeping merge points below a utilisation limit and buffers small. (3) Transport and flow control: models give results close to simulation for fleet and buffer sizing at a fraction of the effort, enabling quick what-if analysis. (4) Research gap: most models assume constant demand, while real warehouses face peaks such as sales events and late cut-offs.",
       "recommendations": [
         "Use queuing models for fast first-cut capacity decisions, then simulation for detail.",
         "Plan staffing around the saturation point instead of adding people at peaks."
       ],
       "reflection": "Simple maths can answer big operational questions quickly, as long as you know where its assumptions break.",
-      "next": [
-        "Time-varying queuing models for peak periods.",
-        "Combine queuing models with real warehouse data."
-      ],
       "skills": [
         "process",
         "data",
@@ -889,7 +853,7 @@ const SITE = {
     },
     {
       "id": "quick-changeover",
-      "title": "Quick changeover inspired by Formula 1 pit stops",
+      "title": "Proposing quick changeover activities and a problem escalation map",
       "org": "Crystal Martin Vietnam",
       "period": "2023–2024",
       "type": "Work",
@@ -904,17 +868,15 @@ const SITE = {
         "value": "F1",
         "label": "pit-stop logic applied to a sewing line"
       },
-      "problem": "Every time a sewing line changed to a new style, production stopped while machines were adjusted, operators were trained and materials were prepared. Long changeovers meant lost output, a slow learning curve and late deliveries, and the steps were owned by many departments with no shared plan.",
-      "approach": "I had worked in operations for the Formula 1 Vietnam Grand Prix, and a pit stop is the perfect changeover: the car stops for only a few seconds because everything that can be prepared is done before it arrives, every crew member has one task, and the sequence is rehearsed. I applied the same logic to the line. Everything that can be done while the old style is still running (external activities) was moved before the stop, and every step got an owner and a deadline: technical allocation 7 days ahead, machine layout handover 7 days ahead, pre-set cut kits, operator training outside the line, machines adjusted and tested off-line, then threading, patterns, trims cards and packing method ready one day before. A QCO board tracks the status of each step, and a first-bundle quality meeting closes the loop. I packaged this into a training workshop with F1 pit-stop videos, team games and a quiz.",
-      "outcome": "The plant got one standard QCO process from style analysis to the first good piece, with clear owners and lead times for 9 preparation and 8 follow-up steps, and clear ramp-up targets: 50% line efficiency within 3 days for bras and 2 days for panties.",
+      "problem": "Every time a sewing line changed to a new style, production stopped while machines were adjusted, operators were trained and materials were prepared. Long changeovers meant lost output, a slow learning curve and late deliveries. The steps were owned by many departments with no shared plan, and when quality problems appeared after the change, nobody knew who had to act and how fast.",
+      "approach": "The idea came from Formula 1. I had worked in operations for the Formula 1 Vietnam Grand Prix, and a pit stop is the perfect changeover: the car stops for only a few seconds because everything that can be prepared is done before it arrives, every crew member has one task, and the sequence is rehearsed.\nI first measured how effective the plant's existing quick-changeover activities were, then applied the pit-stop logic to the line. Everything that can be done while the old style is still running (external activities) was moved before the stop, and every step got an owner and a deadline: technical allocation and machine layout handover 7 days ahead, pre-set cut kits, operator training outside the line, machines adjusted and tested off-line, then threading, patterns, trims cards and packing method ready one day before. A QCO board tracks the status of each step.\nFor problems after the change, I proposed a new escalation map: QC checks the first bundle, a meeting with QC, production and maintenance names the operations that miss requirements, and the line leader retrains operators immediately while inline QC follows up. I packaged everything into a training workshop with F1 pit-stop videos, team games and a quiz.",
+      "outcome": "The plant got one standard QCO process from style analysis to the first good piece, with clear owners and lead times for 9 preparation and 8 follow-up steps, a clear escalation path for quality issues, and ramp-up targets: 50% line efficiency within 3 days for bras and 2 days for panties.",
       "recommendations": [
         "Track changeover time and ramp-up efficiency per style on the QCO board.",
-        "Review the steps that most often finish late and move them earlier."
+        "Review the steps that most often finish late and move them earlier.",
+        "Use the escalation map for every first bundle, not only for critical styles."
       ],
       "reflection": "The best ideas sometimes come from far away. A pit crew and a sewing line look nothing alike, but both win by preparing outside the stop and giving everyone one clear job.",
-      "next": [
-        "Measure changeover time before and after the new process."
-      ],
       "skills": [
         "lean",
         "process",
@@ -922,6 +884,11 @@ const SITE = {
         "pm"
       ],
       "gallery": [
+        {
+          "src": "assets/projects/qco/0-f1-pit-stop.jpg",
+          "title": "The idea: a Formula 1 pit stop",
+          "text": "Everything is prepared before the car arrives, every crew member has one job, and the sequence is rehearsed. The same logic shapes the QCO process."
+        },
         {
           "src": "assets/projects/qco/1-what-why-how.jpg",
           "title": "What, why, how",
@@ -948,7 +915,7 @@ const SITE = {
           "text": "Ramp-up targets after the changeover by product type."
         }
       ],
-      "galleryTitle": "Workshop slides",
+      "galleryTitle": "From pit stop to sewing line",
       "galleryCols": 2
     },
     {
@@ -981,10 +948,6 @@ const SITE = {
         "Keep a human in the loop for every risk rating and mitigation."
       ],
       "reflection": "The hardest part of an AI project is not the AI: it is getting messy, scattered data into one structure people trust.",
-      "next": [
-        "Connect external AI services once data quality is proven.",
-        "Add predictive risk scoring based on past project outcomes."
-      ],
       "skills": [
         "ai",
         "pm",
@@ -1024,7 +987,7 @@ const SITE = {
         }
       ],
       "galleryTitle": "Prototype",
-      "galleryNote": "Prototype screens; company branding replaced with a placeholder.",
+      "galleryNote": "Redesigned versions of the prototype screens from the project; the company name is replaced with a placeholder.",
       "galleryCols": 2
     },
     {
@@ -1047,13 +1010,11 @@ const SITE = {
       "approach": "Systematic literature review following PRISMA 2020: 358 papers from Web of Science and Springer Nature, screened with clear inclusion criteria (2012–2025, Q1/Q2 journals) down to 27 studies, analysed along three research questions.",
       "outcome": "Main findings: (1) Wagon data improves all three sustainability dimensions: economically through real-time visibility, condition monitoring and lower maintenance cost; socially through fewer manual inspections and safer work; environmentally through energy-efficient operation and more reliable service that supports the shift from road to rail. (2) Four levers can scale it across Europe: retrofitting traction and energy-harvesting technology, telematics and on-board sensing, automated identification at yards and borders, and shared data platforms across the multimodal chain. (3) Data moves maintenance from fixed intervals to condition-based and predictive models, reducing downtime, waste and cost.",
       "recommendations": [
-        "Retrofit existing fleets instead of replacing them.",
-        "Agree on shared data standards so wagon data can flow across operators and modes."
+        "Railway operators: modernise existing fleets with modular retrofit kits (traction, braking, energy harvesting, on-board units) with standard interfaces, instead of replacing wagons, and feed the data into fleet and maintenance planning.",
+        "Infrastructure managers and freight operators: invest in integrated telematics, train-integrity and condition-based maintenance, together with clear data governance (common standards, role-based access) so wagon data can be reused for capacity planning, costing and safety.",
+        "Policymakers and EU programmes: link grants, tax incentives or track-access charges to intelligent wagon technologies, and align initiatives such as Europe's Rail on harmonised data standards to avoid incompatible solutions."
       ],
       "reflection": "Sustainability and efficiency usually point in the same direction once you have the data to see it.",
-      "next": [
-        "Quantify the cost and CO₂ effects in real pilot data."
-      ],
       "skills": [
         "data",
         "process"
@@ -1086,9 +1047,6 @@ const SITE = {
         "Follow up with small pilot automations per department."
       ],
       "reflection": "People adopt tools they have touched themselves; booths beat slides.",
-      "next": [
-        "TODO: number of participants and first automations"
-      ],
       "skills": [
         "excel",
         "powerbi",

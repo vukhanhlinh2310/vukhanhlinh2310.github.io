@@ -382,3 +382,6 @@ body.preview .skill-rail { top: 118px; }
 .step img { max-height: 640px; object-fit: contain; }
 @media (max-width: 700px) { .steps-2 { grid-template-columns: 1fr; } }
 @media (max-width: 1100px) and (min-width: 921px) { .logos { grid-template-columns: repeat(3, 1fr); } }
+.case ol.findings { padding-left: 1.3rem; display: grid; gap: .6rem; margin-top: .4rem; }
+.case ol.findings li::marker { color: var(--rose-500); font-weight: 700; }
+.case section p + p { margin-top: .7rem; }

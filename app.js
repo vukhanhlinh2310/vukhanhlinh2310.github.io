@@ -136,7 +136,16 @@
     if (!p || !ready(p)) { location.hash = "#projects"; return; }
     const i = visible.indexOf(p), prev = visible[i - 1], next = visible[i + 1];
     const sec = (title, body) => (body ? `<section><h2>${title}</h2>${body}</section>` : "");
-    const para = (s) => (show(s) ? `<p>${txt(s)}</p>` : "");
+    const para = (s) => {
+      if (!show(s)) return "";
+      const t = String(s);
+      if (/\(1\)/.test(t)) {
+        const parts = t.split(/\(\d\)\s*/);
+        const intro = parts.shift().trim();
+        return (intro ? `<p><b>${txt(intro)}</b></p>` : "") + `<ol class="findings">${parts.map((x) => `<li>${txt(x.trim())}</li>`).join("")}</ol>`;
+      }
+      return t.split("\n").map((x) => `<p>${txt(x)}</p>`).join("");
+    };
     const list = (arr) => { const a = (arr || []).filter(show); return a.length ? `<ul>${a.map((x) => `<li>${txt(x)}</li>`).join("")}</ul>` : ""; };
     const meta = [["Context", p.org], ["Role", p.role], ["Period", p.period], ["Tools", p.tools.join(", ")]]
       .filter(([, v]) => show(v)).map(([k, v]) => `<div><b>${k}</b><span>${txt(v)}</span></div>`).join("");
@@ -156,7 +165,6 @@
       ${sec("Results", para(p.outcome))}
       ${sec("Recommendations", list(p.recommendations))}
       ${sec("Reflection", para(p.reflection))}
-      ${sec("Next steps", list(p.next))}
       ${p.type === "Personal project" ? `<p class="practice-note">Personal practice project with a simulated dataset, built to mirror the planning problems in Supply Chain Analyst roles. ${p.code ? `<a href="${esc(p.code)}" target="_blank" rel="noopener">View the Python code &amp; data on GitHub &rarr;</a>` : ""}</p>` : ""}
       <nav class="case-nav">${prev ? `<a href="#project/${prev.id}">&larr; ${esc(prev.title)}</a>` : "<span></span>"}${next ? `<a href="#project/${next.id}">${esc(next.title)} &rarr;</a>` : ""}</nav>`;
     if (hasViz && window.renderPractice) window.renderPractice($("practice-viz"), window.PRACTICE[p.id]);
