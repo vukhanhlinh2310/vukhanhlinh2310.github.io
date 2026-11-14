@@ -13,7 +13,7 @@
     if (!preview) return esc(before);
     return (before ? esc(before) + " " : "") + '<mark class="todo">' + esc(s.slice(s.indexOf("TODO"))) + "</mark>";
   }
-  const ready = (p) => preview || [p.problem, p.approach, p.outcome].filter(show).length >= 2;
+  const ready = (p) => preview || (show(p.outcome) && [p.problem, p.approach].filter(show).length >= 1);
 
   /* ---------- Reveal on scroll ---------- */
   const io = new IntersectionObserver((es) => es.forEach((en) => {
@@ -61,8 +61,8 @@
   $("about").innerHTML = SITE.about.map((p) => `<p>${esc(p)}</p>`).join("");
   $("logos").innerHTML = SITE.organizations.map((o) => `
     <div class="logo-card reveal">
-      <a class="logo-img" href="${esc(o.url)}" target="_blank" rel="noopener" title="${esc(o.name)} website"><img src="${esc(o.logo)}" alt="${esc(o.name)} logo" loading="lazy"></a>
-      <a class="logo-name" href="${esc(o.url)}" target="_blank" rel="noopener">${esc(o.name)} <span aria-hidden="true">↗</span></a>
+      ${o.logo ? `<a class="logo-img" href="${esc(o.url)}" target="_blank" rel="noopener" title="${esc(o.name)} website"><img src="${esc(o.logo)}" alt="${esc(o.name)} logo" loading="lazy"></a>` : `<a class="logo-img" href="${esc(o.link)}"><span class="logo-badge">${esc(o.badge || o.name[0])}</span></a>`}
+      ${o.url ? `<a class="logo-name" href="${esc(o.url)}" target="_blank" rel="noopener">${esc(o.name)} <span aria-hidden="true">↗</span></a>` : `<span class="logo-name">${esc(o.name)}</span>`}
       <a class="logo-sub" href="${esc(o.link)}">${esc(o.sub)} &rarr;</a>
     </div>`).join("");
 
@@ -85,7 +85,7 @@
   const projLink = (pr) => (pr.link && byId[pr.link] && ready(byId[pr.link]) ? `<a href="#project/${pr.link}">${esc(pr.text)} &rarr;</a>` : esc(pr.text));
   const entryHead = (e, title, sub) => `
     <div class="entry-head">
-      <a class="entry-logo" href="${esc(e.url)}" target="_blank" rel="noopener"><img src="${esc(e.logo)}" alt="${esc(e.org)} logo" loading="lazy"></a>
+      ${e.logo ? `<a class="entry-logo" href="${esc(e.url)}" target="_blank" rel="noopener"><img src="${esc(e.logo)}" alt="${esc(e.org)} logo" loading="lazy"></a>` : `<span class="entry-logo entry-badge">${esc(e.badge || e.org[0])}</span>`}
       <div><h3>${esc(title)}</h3><p class="entry-org">${sub}</p></div>
       <span class="entry-period">${esc(e.period)}<small>${esc(e.place)}</small></span>
     </div>`;
@@ -102,7 +102,7 @@
   /* ---------- Experience ---------- */
   $("experience-list").innerHTML = SITE.experience.map((e) => `
     <article class="entry reveal" id="entry-${e.id}">
-      ${entryHead(e, e.role, `<a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.org)} ↗</a>${e.orgNote ? ` · <span>${esc(e.orgNote)}</span>` : ""}`)}
+      ${entryHead(e, e.role, `${e.url ? `<a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.org)} ↗</a>` : `<b>${esc(e.org)}</b>`}${e.orgNote ? ` · <span>${esc(e.orgNote)}</span>` : ""}`)}
       <ul class="entry-points">${e.points.map((pt) => `<li><b>${esc(pt.title)}:</b> ${txt(pt.text)}</li>`).join("")}</ul>
       ${e.projects.length ? `<h4>Projects</h4><ul class="entry-projects">${e.projects.map((pr) => `<li>${projLink(pr)}</li>`).join("")}</ul>` : ""}
     </article>`).join("");
@@ -152,7 +152,7 @@
       ${sec("The challenge", para(p.problem))}
       ${sec("Approach", para(p.approach))}
       ${hasViz ? '<section class="wide"><h2>Analysis &amp; visuals</h2><div id="practice-viz"></div></section>' : preview ? sec("Analysis & visuals", '<div class="chart-slot">Chart / dashboard goes here (hidden on the public site until added)</div>') : ""}
-      ${p.gallery ? `<section class="wide"><h2>How it works</h2>${p.simulated ? '<p class="sim-banner">All screenshots use <b>simulated data</b>. The original tool contains confidential bank figures, so this demo rebuilds the same structure with invented numbers.</p>' : ""}<div class="steps">${p.gallery.map((g) => `<figure class="step"><a href="${esc(g.src)}" target="_blank" rel="noopener"><img src="${esc(g.src)}" alt="${esc(g.title)}" loading="lazy"></a><figcaption><b>${esc(g.title)}</b>${esc(g.text)}</figcaption></figure>`).join("")}</div>${p.download ? `<a class="btn-download" href="${esc(p.download)}" download>Download the demo workbook (.xlsx, simulated data)</a>` : ""}</section>` : ""}
+      ${p.gallery ? `<section class="wide"><h2>${esc(p.galleryTitle || "How it works")}</h2>${p.simulated ? '<p class="sim-banner">All screenshots use <b>simulated data</b>. The original tool contains confidential bank figures, so this demo rebuilds the same structure with invented numbers.</p>' : ""}${p.galleryNote ? `<p class="gallery-note">${esc(p.galleryNote)}</p>` : ""}<div class="steps${p.galleryCols === 2 ? " steps-2" : ""}">${p.gallery.map((g) => `<figure class="step"><a href="${esc(g.src)}" target="_blank" rel="noopener"><img src="${esc(g.src)}" alt="${esc(g.title)}" loading="lazy"></a><figcaption><b>${esc(g.title)}</b>${esc(g.text)}</figcaption></figure>`).join("")}</div>${p.download ? `<a class="btn-download" href="${esc(p.download)}" download>Download the demo workbook (.xlsx, simulated data)</a>` : ""}</section>` : ""}
       ${sec("Results", para(p.outcome))}
       ${sec("Recommendations", list(p.recommendations))}
       ${sec("Reflection", para(p.reflection))}

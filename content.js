@@ -9,185 +9,494 @@
 */
 
 const SITE = {
-  name: "Linh Vu",
-  headline: "Linh Vu – Supply Chain Analyst",
-  coverTitle: "Supply Chain · Operations · Analytics",
-  quote: "I turn supply chain data into decisions that save money.",
-  location: "Darmstadt, Germany",
-  availability: "Available from January 2027",
-  photo: "assets/photos/avatar.jpg",
-  resume: "", // e.g. "assets/Linh_Vu_CV.pdf" -> adds a Resume button
-
-  contacts: [
-    { label: "LinkedIn", text: "linkedin.com/in/linh-vu-khanh-23102001", url: "https://www.linkedin.com/in/linh-vu-khanh-23102001", icon: "assets/icons/linkedin.png" },
-    { label: "Email", text: "vklinh231001@gmail.com", url: "mailto:vklinh231001@gmail.com", icon: "assets/icons/gmail.png" },
-    { label: "GitHub", text: "github.com/vukhanhlinh2310", url: "https://github.com/vukhanhlinh2310", icon: "assets/icons/github.png" }
+  "name": "Linh Vu",
+  "headline": "Linh Vu – Supply Chain Analyst",
+  "coverTitle": "Supply Chain · Operations · Analytics",
+  "quote": "I turn supply chain data into decisions that save money.",
+  "location": "Darmstadt, Germany",
+  "availability": "Available from January 2027",
+  "photo": "assets/photos/avatar.jpg",
+  "resume": "",
+  "contacts": [
+    {
+      "label": "LinkedIn",
+      "text": "linkedin.com/in/linh-vu-khanh-23102001",
+      "url": "https://www.linkedin.com/in/linh-vu-khanh-23102001",
+      "icon": "assets/icons/linkedin.png"
+    },
+    {
+      "label": "Email",
+      "text": "vklinh231001@gmail.com",
+      "url": "mailto:vklinh231001@gmail.com",
+      "icon": "assets/icons/gmail.png"
+    },
+    {
+      "label": "GitHub",
+      "text": "github.com/vukhanhlinh2310",
+      "url": "https://github.com/vukhanhlinh2310",
+      "icon": "assets/icons/github.png"
+    }
   ],
-
-  about: [
+  "about": [
     "I am finishing my MSc in Logistics & Supply Chain Management at TU Darmstadt (thesis submission December 2026), after a bachelor's in International Business at Foreign Trade University in Vietnam.",
     "I started on the operations side: spare parts inventory control at Honda's Part Supply Chain Management Center, then a management trainee program at Crystal International. Since 2024 I have worked at VietinBank's Germany branch, where I added data analysis, partner management and German work culture to my toolkit.",
     "I enjoy problems where operations meet numbers: why stock sits in the wrong place, where cost leaks out of a process, and how to explain the fix so people act on it."
   ],
-
-  /* Logo strip on Overview: name -> official website, sub -> section on this site */
-  organizations: [
-    { name: "TU Darmstadt", url: "https://www.tu-darmstadt.de", logo: "assets/logos/tu-darmstadt.png", sub: "MSc Logistics & SCM", link: "#projects/academic" },
-    { name: "Foreign Trade University", url: "https://ftu.edu.vn", logo: "assets/logos/ftu.png", sub: "BA International Business", link: "#education/ftu" },
-    { name: "VietinBank", url: "https://www.vietinbank.de", logo: "assets/logos/vietinbank.png", sub: "Working Student", link: "#experience/vietinbank" },
-    { name: "Crystal International", url: "https://www.crystalgroup.com", logo: "assets/logos/crystal.png", sub: "Management Trainee", link: "#experience/crystal" },
-    { name: "Honda Vietnam", url: "https://www.honda.com.vn", logo: "assets/logos/honda.png", sub: "Inventory Control Intern", link: "#experience/honda" }
-  ],
-
-  featured: ["honda-network", "sop-capacity", "material-availability"],
-
-  /* ---------- Education (from CV) ---------- */
-  education: [
+  "organizations": [
     {
-      id: "tud", org: "Technische Universität Darmstadt", logo: "assets/logos/tu-darmstadt.png", url: "https://www.tu-darmstadt.de",
-      degree: "MSc Logistics & Supply Chain Management", period: "Oct 2024 – Dec 2026", place: "Darmstadt, Germany",
-      details: ["Master's thesis submission in December 2026. TODO: thesis topic"],
-      projects: [
-        { text: "AI support in Project Risk Management", link: "ai-risk" },
-        { text: "Applications of Queuing Theory to Order Picking Systems", link: "queuing" },
-        { text: "Intelligent Freight Wagon: How Data Collection Supports Sustainable Rail Transport", link: "freight-wagon" },
-        { text: "Optimizing Anticipatory Shipping: A Comparative Analysis of Forecasting Methods in Retail Supply Chains", link: "forecasting" }
-      ]
+      "name": "TU Darmstadt",
+      "url": "https://www.tu-darmstadt.de",
+      "logo": "assets/logos/tu-darmstadt.png",
+      "sub": "MSc Logistics & SCM",
+      "link": "#projects/academic"
     },
     {
-      id: "ftu", org: "Foreign Trade University", logo: "assets/logos/ftu.png", url: "https://ftu.edu.vn",
-      degree: "Bachelor of International Business", period: "2019 – 2023", place: "Vietnam",
-      details: ["FIATA Higher Diploma in Supply Chain Management"],
-      projects: []
+      "name": "Foreign Trade University",
+      "url": "https://ftu.edu.vn",
+      "logo": "assets/logos/ftu.png",
+      "sub": "BA International Business",
+      "link": "#education/ftu"
+    },
+    {
+      "name": "VietinBank",
+      "url": "https://www.vietinbank.de",
+      "logo": "assets/logos/vietinbank.png",
+      "sub": "Working Student",
+      "link": "#experience/vietinbank"
+    },
+    {
+      "name": "Crystal International",
+      "url": "https://www.crystalgroup.com",
+      "logo": "assets/logos/crystal.png",
+      "sub": "Management Trainee",
+      "link": "#experience/crystal"
+    },
+    {
+      "name": "Honda Vietnam",
+      "url": "https://www.honda.com.vn",
+      "logo": "assets/logos/honda.png",
+      "sub": "Inventory Control Intern",
+      "link": "#experience/honda"
+    },
+    {
+      "name": "Vietnam Grand Prix",
+      "url": "",
+      "logo": "",
+      "badge": "F1",
+      "sub": "Operations Intern",
+      "link": "#experience/f1"
     }
   ],
-  certificates: [
-    { name: "FIATA Higher Diploma in Supply Chain Management", note: "International Federation of Freight Forwarders Associations" },
-    { name: "IELTS 7.5", note: "Professional working English" },
-    { name: "German B1+", note: "Improving daily at work" }
+  "featured": [
+    "honda-network",
+    "quick-changeover",
+    "ai-risk"
   ],
-  languages: [
-    { name: "Vietnamese", level: "Native", pct: 100 },
-    { name: "English", level: "Professional · IELTS 7.5", pct: 90 },
-    { name: "German", level: "B1+", pct: 55 }
-  ],
-
-  /* ---------- Experience (full CV bullets) ---------- */
-  experience: [
+  "education": [
     {
-      id: "vietinbank", logo: "assets/logos/vietinbank.png", url: "https://www.vietinbank.de",
-      role: "Working Student, Retail Banking", org: "VietinBank Germany Branch",
-      orgNote: "The first and only Vietnamese bank operating in Europe", place: "Frankfurt am Main, Germany", period: "Dec 2024 – today",
-      points: [
-        { title: "Customer Operations", text: "Manage end-to-end customer onboarding and handle customer requests and complaints." },
-        { title: "New Product Development and Launching", text: "Led the entire product lifecycle for a new financial solution, from concept formulation, demand and feasibility analysis and trial run to market launch, establishing a new, sustainable revenue stream for the bank while improving the overall customer experience." },
-        { title: "Data & Market Analysis", text: "Create reports and analyse market trends and customer insights to drive cost restructuring and expansion strategies." },
-        { title: "Partner Management", text: "Sourced, evaluated and managed strategic partnerships to improve operational and financial viability." },
-        { title: "Compliance and Process Alignment", text: "Coordinated with internal departments to ensure all marketing and product activities met local financial regulations." },
-        { title: "Cross-functional Alignment", text: "Acted as first contact, connecting internal stakeholders (Compliance, Operations, IT) and external partners." }
+      "id": "tud",
+      "org": "Technische Universität Darmstadt",
+      "logo": "assets/logos/tu-darmstadt.png",
+      "url": "https://www.tu-darmstadt.de",
+      "degree": "MSc Logistics & Supply Chain Management",
+      "period": "Oct 2024 – Dec 2026",
+      "place": "Darmstadt, Germany",
+      "details": [
+        "Master's thesis submission in December 2026. TODO: thesis topic"
       ],
-      projects: [
-        { text: "Weekly KPI dashboard for the blocked-account product (Excel)", link: "kpi-dashboard" },
-        { text: "New financial product launch", link: "product-launch" },
-        { text: "Outsourcing project (ongoing)", link: "outsourcing" }
+      "projects": [
+        {
+          "text": "AI support in Project Risk Management",
+          "link": "ai-risk"
+        },
+        {
+          "text": "Applications of Queuing Theory to Order Picking Systems",
+          "link": "queuing"
+        },
+        {
+          "text": "Intelligent Freight Wagon: How Data Collection Supports Sustainable Rail Transport",
+          "link": "freight-wagon"
+        },
+        {
+          "text": "Optimizing Anticipatory Shipping: A Comparative Analysis of Forecasting Methods in Retail Supply Chains",
+          "link": "forecasting"
+        }
       ]
     },
     {
-      id: "crystal", logo: "assets/logos/crystal.png", url: "https://www.crystalgroup.com",
-      role: "Production Associate, Management Trainee Program", org: "Crystal Martin Vietnam",
-      orgNote: "Crystal International Group, a global leader in apparel manufacturing", place: "Vietnam", period: "Jun 2023 – May 2024",
-      points: [
-        { title: "Production Optimization", text: "Production planning, industrial engineering, layout evaluation and capacity optimisation to drive operational efficiency." },
-        { title: "Onsite Management", text: "Managed day-to-day onsite production, ensuring alignment with strict output and quality targets." },
-        { title: "Supply Chain Control", text: "Optimised material flow and end-to-end supply chain visibility, from raw material intake and logistics activities to packaging." },
-        { title: "Rotation Training", text: "Completed cross-functional rotations across Procurement, Merchandising, Production Planning, Warehousing and QA/QC." },
-        { title: "Operational Excellence", text: "Implemented 5S management standards to foster an organised, efficient and safe workplace." }
+      "id": "ftu",
+      "org": "Foreign Trade University",
+      "logo": "assets/logos/ftu.png",
+      "url": "https://ftu.edu.vn",
+      "degree": "Bachelor of International Business",
+      "period": "2019 – 2023",
+      "place": "Vietnam",
+      "details": [
+        "FIATA Higher Diploma in Supply Chain Management"
       ],
-      projects: [
-        { text: "Digitalization Transformation Project: introductory workshop on automating daily work with the Microsoft ecosystem", link: "digital-workshop" },
-        { text: "Measuring the effectiveness of quick-changeover activities and proposing a new problem escalation map", link: "quick-changeover" },
-        { text: "Material optimization: optimised binding-tape usage, reducing the SAM of critical operations by 21%", link: "binding-tape" }
-      ]
-    },
-    {
-      id: "honda", logo: "assets/logos/honda.png", url: "https://www.honda.com.vn",
-      role: "Inventory Control Intern", org: "Honda Vietnam · Part Supply Chain Management Center",
-      orgNote: "", place: "Vietnam", period: "Feb 2023 – Jun 2023",
-      points: [
-        { title: "SAP System", text: "Extracted and analysed inventory data and allocated goods among storage locations to fulfil urgent orders." },
-        { title: "Reporting", text: "Prepared daily inventory management documents and weekly and monthly back-order reports in PowerPoint and Power BI." },
-        { title: "Back-order Control", text: "Controlled back-orders and managed cross-warehouse back-order release." },
-        { title: "Stock-taking", text: "Took part in the annual stock-taking." }
-      ],
-      projects: [
-        { text: "Cross-warehouse back-order release optimization: proposed a new distribution network and cut the process's logistics cost by 8.8%", link: "honda-network" },
-        { text: "Standardised the training process on inventory management and back-order control for newcomers", link: "" }
+      "projects": [
+        {
+          "text": "Graduation thesis: Analysis of cross-warehouse back-order release at Honda Vietnam's Part Supply Chain Management Center",
+          "link": "honda-network"
+        }
       ]
     }
   ],
-
-  /* ---------- Skills (sidebar in Projects) ---------- */
-  skills: [
-    { id: "excel", name: "Excel", icon: "assets/icons/excel.png" },
-    { id: "powerbi", name: "Power BI", icon: "assets/icons/powerbi.png" },
-    { id: "powerpoint", name: "PowerPoint", icon: "assets/icons/powerpoint.png" },
-    { id: "sap", name: "SAP (MM, SD)", badge: "SAP" },
-    { id: "python", name: "Python", badge: "Py" },
-    { id: "ai", name: "AI tools", badge: "AI" },
-    { id: "data", name: "Data analysis & KPIs", badge: "D" },
-    { id: "forecasting", name: "Demand forecasting", badge: "F" },
-    { id: "inventory", name: "Inventory management", badge: "I" },
-    { id: "capacity", name: "Capacity planning & S&OP", badge: "C" },
-    { id: "production", name: "Production planning", badge: "P" },
-    { id: "process", name: "Process optimization", badge: "O" },
-    { id: "lean", name: "Lean & 5S", badge: "5S" },
-    { id: "partner", name: "Supplier & partner management", badge: "S" },
-    { id: "stakeholder", name: "Stakeholder management", badge: "St" },
-    { id: "pm", name: "Project management", badge: "PM" }
+  "certificates": [
+    {
+      "name": "FIATA Higher Diploma in Supply Chain Management",
+      "note": "International Federation of Freight Forwarders Associations"
+    },
+    {
+      "name": "IELTS 7.5",
+      "note": "Professional working English"
+    },
+    {
+      "name": "German B1+",
+      "note": "Improving daily at work"
+    }
   ],
-
-  /* ---------- About me ---------- */
-  hobbies: [
-    { title: "Indoor plants", text: "My flat is slowly turning into a jungle: monstera, calathea, peace lily, snake plant and more. Keeping them happy is my daily reset, and a good lesson in patience and routine.", photos: ["assets/photos/plants-shelf.jpg", "assets/photos/plants-desk.jpg"] },
-    { title: "Running", text: "I ran two seasons of the J.P. Morgan Corporate Challenge in Frankfurt with my VietinBank colleagues. Few things build a team like crossing a finish line together.", photos: ["assets/photos/running.jpg"] },
-    { title: "Tennis", text: "My favourite way to switch off after a day of numbers: red clay, a pink racket and a lot of balls to collect.", photos: ["assets/photos/tennis.jpg"] },
-    { title: "Analog photography", text: "I shoot film on a vintage Olympus. With only 36 frames per roll, every shot has to count, which is not that different from planning.", photos: ["assets/photos/analog.jpg"] }
+  "languages": [
+    {
+      "name": "Vietnamese",
+      "level": "Native",
+      "pct": 100
+    },
+    {
+      "name": "English",
+      "level": "Professional · IELTS 7.5",
+      "pct": 90
+    },
+    {
+      "name": "German",
+      "level": "B1+",
+      "pct": 55
+    }
   ],
-
-  story: {
-    title: "From the shop floor to data, and from Vietnam to Germany",
-    intro: "My path has not been a straight line, and that is exactly what shaped how I work.",
-    chapters: [
+  "experience": [
+    {
+      "id": "vietinbank",
+      "logo": "assets/logos/vietinbank.png",
+      "url": "https://www.vietinbank.de",
+      "role": "Working Student, Retail Banking",
+      "org": "VietinBank Germany Branch",
+      "orgNote": "The first and only Vietnamese bank operating in Europe",
+      "place": "Frankfurt am Main, Germany",
+      "period": "Dec 2024 – today",
+      "points": [
+        {
+          "title": "Customer Operations",
+          "text": "Manage end-to-end customer onboarding and handle customer requests and complaints."
+        },
+        {
+          "title": "New Product Development and Launching",
+          "text": "Led the entire product lifecycle for a new financial solution, from concept formulation, demand and feasibility analysis and trial run to market launch, establishing a new, sustainable revenue stream for the bank while improving the overall customer experience."
+        },
+        {
+          "title": "Data & Market Analysis",
+          "text": "Create reports and analyse market trends and customer insights to drive cost restructuring and expansion strategies."
+        },
+        {
+          "title": "Partner Management",
+          "text": "Sourced, evaluated and managed strategic partnerships to improve operational and financial viability."
+        },
+        {
+          "title": "Compliance and Process Alignment",
+          "text": "Coordinated with internal departments to ensure all marketing and product activities met local financial regulations."
+        },
+        {
+          "title": "Cross-functional Alignment",
+          "text": "Acted as first contact, connecting internal stakeholders (Compliance, Operations, IT) and external partners."
+        }
+      ],
+      "projects": [
+        {
+          "text": "Weekly KPI dashboard for the blocked-account product (Excel)",
+          "link": "kpi-dashboard"
+        },
+        {
+          "text": "New financial product launch",
+          "link": "product-launch"
+        },
+        {
+          "text": "Outsourcing project (ongoing)",
+          "link": "outsourcing"
+        }
+      ]
+    },
+    {
+      "id": "crystal",
+      "logo": "assets/logos/crystal.png",
+      "url": "https://www.crystalgroup.com",
+      "role": "Production Associate, Management Trainee Program",
+      "org": "Crystal Martin Vietnam",
+      "orgNote": "Crystal International Group, a global leader in apparel manufacturing",
+      "place": "Vietnam",
+      "period": "Jun 2023 – May 2024",
+      "points": [
+        {
+          "title": "Production Optimization",
+          "text": "Production planning, industrial engineering, layout evaluation and capacity optimisation to drive operational efficiency."
+        },
+        {
+          "title": "Onsite Management",
+          "text": "Managed day-to-day onsite production, ensuring alignment with strict output and quality targets."
+        },
+        {
+          "title": "Supply Chain Control",
+          "text": "Optimised material flow and end-to-end supply chain visibility, from raw material intake and logistics activities to packaging."
+        },
+        {
+          "title": "Rotation Training",
+          "text": "Completed cross-functional rotations across Procurement, Merchandising, Production Planning, Warehousing and QA/QC."
+        },
+        {
+          "title": "Operational Excellence",
+          "text": "Implemented 5S management standards to foster an organised, efficient and safe workplace."
+        }
+      ],
+      "projects": [
+        {
+          "text": "Digitalization Transformation Project: introductory workshop on automating daily work with the Microsoft ecosystem",
+          "link": "digital-workshop"
+        },
+        {
+          "text": "Measuring the effectiveness of quick-changeover activities and proposing a new problem escalation map",
+          "link": "quick-changeover"
+        },
+        {
+          "text": "Material optimization: optimised binding-tape usage, reducing the SAM of critical operations by 21%",
+          "link": "binding-tape"
+        }
+      ]
+    },
+    {
+      "id": "honda",
+      "logo": "assets/logos/honda.png",
+      "url": "https://www.honda.com.vn",
+      "role": "Inventory Control Intern",
+      "org": "Honda Vietnam · Part Supply Chain Management Center",
+      "orgNote": "",
+      "place": "Vietnam",
+      "period": "Feb 2023 – Jun 2023",
+      "points": [
+        {
+          "title": "SAP System",
+          "text": "Extracted and analysed inventory data and allocated goods among storage locations to fulfil urgent orders."
+        },
+        {
+          "title": "Reporting",
+          "text": "Prepared daily inventory management documents and weekly and monthly back-order reports in PowerPoint and Power BI."
+        },
+        {
+          "title": "Back-order Control",
+          "text": "Controlled back-orders and managed cross-warehouse back-order release."
+        },
+        {
+          "title": "Stock-taking",
+          "text": "Took part in the annual stock-taking."
+        }
+      ],
+      "projects": [
+        {
+          "text": "Cross-warehouse back-order release optimization: proposed a new distribution network and cut the process's logistics cost by 8.8%",
+          "link": "honda-network"
+        },
+        {
+          "text": "Standardised the training process on inventory management and back-order control for newcomers",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "id": "f1",
+      "logo": "",
+      "badge": "F1",
+      "url": "",
+      "role": "Operations Intern",
+      "org": "Vietnam Grand Prix Corporation",
+      "orgNote": "Organiser of the planned Formula 1 Vietnam Grand Prix",
+      "place": "Hanoi, Vietnam",
+      "period": "Jan 2020 – Apr 2020",
+      "points": [
+        {
+          "title": "Translation",
+          "text": "Translated documents and meetings between Vietnamese and English for the operations team."
+        },
+        {
+          "title": "Research & Synthesis",
+          "text": "Collected and synthesised information to support event preparation."
+        },
+        {
+          "title": "Documentation",
+          "text": "Compiled documents and papers based on the standards of previous Formula 1 events."
+        },
+        {
+          "title": "Operations Support",
+          "text": "Handled other operational tasks assigned by the manager."
+        }
+      ],
+      "projects": [
+        {
+          "text": "The pit-stop logic I saw here later inspired my quick changeover (QCO) workshop at Crystal Martin",
+          "link": "quick-changeover"
+        }
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "id": "excel",
+      "name": "Excel",
+      "icon": "assets/icons/excel.png"
+    },
+    {
+      "id": "powerbi",
+      "name": "Power BI",
+      "icon": "assets/icons/powerbi.png"
+    },
+    {
+      "id": "powerpoint",
+      "name": "PowerPoint",
+      "icon": "assets/icons/powerpoint.png"
+    },
+    {
+      "id": "sap",
+      "name": "SAP (MM, SD)",
+      "badge": "SAP"
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "badge": "Py"
+    },
+    {
+      "id": "ai",
+      "name": "AI tools",
+      "badge": "AI"
+    },
+    {
+      "id": "data",
+      "name": "Data analysis & KPIs",
+      "badge": "D"
+    },
+    {
+      "id": "forecasting",
+      "name": "Demand forecasting",
+      "badge": "F"
+    },
+    {
+      "id": "inventory",
+      "name": "Inventory management",
+      "badge": "I"
+    },
+    {
+      "id": "capacity",
+      "name": "Capacity planning & S&OP",
+      "badge": "C"
+    },
+    {
+      "id": "production",
+      "name": "Production planning",
+      "badge": "P"
+    },
+    {
+      "id": "process",
+      "name": "Process optimization",
+      "badge": "O"
+    },
+    {
+      "id": "lean",
+      "name": "Lean & 5S",
+      "badge": "5S"
+    },
+    {
+      "id": "partner",
+      "name": "Supplier & partner management",
+      "badge": "S"
+    },
+    {
+      "id": "stakeholder",
+      "name": "Stakeholder management",
+      "badge": "St"
+    },
+    {
+      "id": "pm",
+      "name": "Project management",
+      "badge": "PM"
+    }
+  ],
+  "hobbies": [
+    {
+      "title": "Indoor plants",
+      "text": "My flat is slowly turning into a jungle: monstera, calathea, peace lily, snake plant and more. Keeping them happy is my daily reset, and a good lesson in patience and routine.",
+      "photos": [
+        "assets/photos/plants-shelf.jpg",
+        "assets/photos/plants-desk.jpg"
+      ]
+    },
+    {
+      "title": "Running",
+      "text": "I ran two seasons of the J.P. Morgan Corporate Challenge in Frankfurt with my VietinBank colleagues. Few things build a team like crossing a finish line together.",
+      "photos": [
+        "assets/photos/running.jpg"
+      ]
+    },
+    {
+      "title": "Tennis",
+      "text": "My favourite way to switch off after a day of numbers: red clay, a pink racket and a lot of balls to collect.",
+      "photos": [
+        "assets/photos/tennis.jpg"
+      ]
+    },
+    {
+      "title": "Analog photography",
+      "text": "I shoot film on a vintage Olympus. With only 36 frames per roll, every shot has to count, which is not that different from planning.",
+      "photos": [
+        "assets/photos/analog.jpg"
+      ]
+    }
+  ],
+  "story": {
+    "title": "From the shop floor to data, and from Vietnam to Germany",
+    "intro": "My path has not been a straight line, and that is exactly what shaped how I work.",
+    "chapters": [
       {
-        kicker: "01 · An early start",
-        title: "Management trainee right after my bachelor's",
-        text: "Straight after my bachelor's in International Business, I joined the management trainee program at Crystal International. I rotated through procurement, merchandising, production planning, warehousing and quality, managed daily production on site and led improvement projects. It was the best possible crash course in how operations really work."
+        "kicker": "01 · An early start",
+        "title": "Management trainee right after my bachelor's",
+        "text": "Straight after my bachelor's in International Business, I joined the management trainee program at Crystal International. I rotated through procurement, merchandising, production planning, warehousing and quality, managed daily production on site and led improvement projects. It was the best possible crash course in how operations really work."
       },
       {
-        kicker: "02 · Knowing what I was missing",
-        title: "Seeing the problem is not the same as solving it",
-        text: "On the floor I could spot where things went wrong, but I lacked the technical and quantitative tools to model problems and prove solutions. Instead of ignoring that gap, I decided to close it, and chose a master's in Logistics & Supply Chain Management at TU Darmstadt for its strong quantitative focus."
+        "kicker": "02 · Knowing what I was missing",
+        "title": "Seeing the problem is not the same as solving it",
+        "text": "On the floor I could spot where things went wrong, but I lacked the technical and quantitative tools to model problems and prove solutions. Instead of ignoring that gap, I decided to close it, and chose a master's in Logistics & Supply Chain Management at TU Darmstadt for its strong quantitative focus."
       },
       {
-        kicker: "03 · A fresh start in Germany",
-        title: "Treasuring every opportunity",
-        text: "Moving to Germany meant a new language, a new system and no network. I decided to treasure every opportunity I got. Banking was within reach thanks to my International Business background, and VietinBank's Germany branch offered something rare: an international organisation working fully inside the German system."
+        "kicker": "03 · A fresh start in Germany",
+        "title": "Treasuring every opportunity",
+        "text": "Moving to Germany meant a new language, a new system and no network. I decided to treasure every opportunity I got. Banking was within reach thanks to my International Business background, and VietinBank's Germany branch offered something rare: an international organisation working fully inside the German system."
       },
       {
-        kicker: "04 · What the bank gave me",
-        title: "German, culture and a lot more data",
-        text: "I use German every day and have improved it steadily. I learned how German organisations work: clear processes, careful documentation, direct communication. I worked with far more data than I expected, managed partners, launched a product, and I am now working on a project about outsourcing, which is vendor management in another form."
+        "kicker": "04 · What the bank gave me",
+        "title": "German, culture and a lot more data",
+        "text": "I use German every day and have improved it steadily. I learned how German organisations work: clear processes, careful documentation, direct communication. I worked with far more data than I expected, managed partners, launched a product, and I am now working on a project about outsourcing, which is vendor management in another form."
       },
       {
-        kicker: "05 · Running together",
-        title: "Two seasons of the J.P. Morgan Run",
-        text: "One of my favourite memories is running the J.P. Morgan Corporate Challenge in Frankfurt with my colleagues, two seasons in a row. It showed me the team behind the work, and why I love being part of one."
+        "kicker": "05 · Running together",
+        "title": "Two seasons of the J.P. Morgan Run",
+        "text": "One of my favourite memories is running the J.P. Morgan Corporate Challenge in Frankfurt with my colleagues, two seasons in a row. It showed me the team behind the work, and why I love being part of one."
       }
     ],
-    takeaways: ["Operations know-how", "Quantitative methods", "German work culture", "Financial data analysis", "Vendor & partner management", "Team spirit"]
+    "takeaways": [
+      "Operations know-how",
+      "Quantitative methods",
+      "German work culture",
+      "Financial data analysis",
+      "Vendor & partner management",
+      "Team spirit"
+    ]
   },
-
-  projects: [
+  "projects": [
     {
       "id": "schedule-adherence",
       "title": "Engine build schedule adherence & order prioritisation",
@@ -307,26 +616,31 @@ const SITE = {
       "period": "2023",
       "type": "Work",
       "hue": 0,
-      "role": "Inventory Control Intern",
+      "role": "Inventory Control Intern · bachelor's thesis",
       "tools": [
         "SAP MM/SD",
         "Excel",
-        "Power BI"
+        "Power BI",
+        "ABC analysis",
+        "SWOT"
       ],
       "result": {
         "value": "-8.8%",
         "label": "logistics cost of the process"
       },
-      "problem": "Urgent spare-part orders were held as back-orders while stock sat in other warehouses, and releasing them across locations was costly.",
-      "approach": "Analysed inventory and back-order data from SAP, mapped the flow between storage locations and proposed a new distribution network for cross-warehouse releases.",
-      "outcome": "The proposed network cut the logistics cost of the back-order release process by 8.8%. TODO: Was it implemented? How many parts/orders per month?",
+      "problem": "Honda Vietnam supplies spare parts to dealers nationwide from two warehouses: Vinh Phuc in the north and Binh Duong in the south. When the local warehouse was out of stock, dealer orders became back-orders even if the part was available in the other warehouse. Releasing them across warehouses was slow and costly: orders were split into 7–10 SAP batches and shipped either slowly with periodic container moves or expensively by express.",
+      "approach": "Analysed back-order and release data from 2020 to March 2023, ranked parts with an ABC analysis by sales, mapped the cross-release procedure in SAP and with the outsourced warehouse operator, and evaluated the activity with a SWOT. Benchmarked distribution models from supply chain literature to redesign the north-to-south flow.",
+      "outcome": "Proposed a \"direct shipping with milk runs\" model: each day's north-to-south releases are consolidated into one truck that serves several dealers in the south, instead of splitting urgent and stock orders. Express shipping stays for the small south-to-north flow. The proposal cut the logistics cost of the back-order release process by 8.8%.",
       "recommendations": [
-        "Route cross-warehouse releases through the proposed network instead of ad-hoc transfers.",
-        "Track back-order age and release cost as standing KPIs in the weekly report."
+        "Forecast demand together with the sales and procurement teams instead of from history alone.",
+        "Review safety stock per part instead of applying one standard per ABC rank.",
+        "Synchronise SAP with the warehouse operator so back-orders release in one run instead of 7–10 batches.",
+        "Negotiate long-term carrier terms for the milk-run route."
       ],
-      "reflection": "Small routing decisions add up: most of the saving came from reorganising flows that people had stopped questioning.",
+      "reflection": "Most of the saving came from questioning a routine that everyone accepted: splitting shipments by urgency looked logical order by order, but cost more across the whole network.",
       "next": [
-        "TODO: what you would do next, e.g. safety stock review per location"
+        "Track back-order age and release cost as weekly KPIs.",
+        "Re-run the analysis with a full year of data after the milk run starts."
       ],
       "skills": [
         "sap",
@@ -335,7 +649,21 @@ const SITE = {
         "powerbi",
         "excel",
         "process"
-      ]
+      ],
+      "gallery": [
+        {
+          "src": "assets/projects/honda/1-warehouse-map.png",
+          "title": "Two warehouses, one network",
+          "text": "Vinh Phuc (north, red) and Binh Duong (south, blue) serve their own regions; back-orders are released from the other warehouse when local stock runs out. Source: bachelor's thesis, based on company information."
+        },
+        {
+          "src": "assets/projects/honda/2-release-process.png",
+          "title": "Cross-warehouse release process",
+          "text": "Export back-order and on-hand data from SAP, combine them to find items that can be released, change the warehouse in SAP, then the warehouse picks, packs and delivers."
+        }
+      ],
+      "galleryTitle": "Network & process",
+      "galleryCols": 2
     },
     {
       "id": "forecasting",
@@ -531,150 +859,241 @@ const SITE = {
       "period": "2025",
       "type": "Academic",
       "hue": 5,
-      "role": "TODO: solo or team role",
+      "role": "",
       "tools": [
-        "TODO: tools"
+        "Systematic literature review",
+        "PRISMA 2020",
+        "Queuing models"
       ],
       "result": {
-        "value": "TODO",
-        "label": "TODO: key result"
+        "value": "24",
+        "label": "studies reviewed"
       },
-      "problem": "Order picking is the most labour-intensive warehouse process. Where do waiting times build up and how many pickers are needed?",
-      "approach": "Modelled the picking system as a queuing network. TODO: model type, parameters, simulation or analytical.",
-      "outcome": "TODO: findings (utilisation, waiting time, optimal capacity).",
+      "problem": "Order picking is the most labour- and cost-intensive warehouse process. Decisions such as how many pickers or robots to deploy, how to design stations and how to size internal transport are usually made with slow simulations or trial and error. Can queuing theory answer them faster?",
+      "approach": "Systematic literature review following PRISMA 2020: 341 records from academic databases, screened down to 24 studies that apply queuing models to warehouse order picking, grouped into picker allocation and staffing, picking station design, and internal transport.",
+      "outcome": "Main findings: (1) Staffing: queuing networks reveal a saturation point where extra pickers, robots or vehicles stop adding throughput and waiting lines take over, replacing trial and error with a clear threshold. (2) Station and layout design: analytical models evaluate thousands of buffer and zone configurations in seconds, giving simple rules such as keeping merge points below a utilisation limit and buffers small. (3) Transport and flow control: models give results close to simulation for fleet and buffer sizing at a fraction of the effort, enabling quick what-if analysis. The main gap: most models assume constant demand, while real warehouses face peaks such as sales events and late cut-offs.",
       "recommendations": [
-        "TODO"
+        "Use queuing models for fast first-cut capacity decisions, then simulation for detail.",
+        "Plan staffing around the saturation point instead of adding people at peaks."
       ],
-      "reflection": "TODO",
+      "reflection": "Simple maths can answer big operational questions quickly, as long as you know where its assumptions break.",
       "next": [
-        "TODO"
+        "Time-varying queuing models for peak periods.",
+        "Combine queuing models with real warehouse data."
       ],
       "skills": [
         "process",
-        "data"
+        "data",
+        "capacity"
       ]
     },
     {
       "id": "quick-changeover",
-      "title": "Quick changeover and problem escalation",
+      "title": "Quick changeover inspired by Formula 1 pit stops",
       "org": "Crystal Martin Vietnam",
       "period": "2023–2024",
       "type": "Work",
       "hue": 1,
-      "role": "Management Trainee",
+      "role": "Management Trainee · designed and ran the workshop",
       "tools": [
-        "SMED",
-        "Process mapping"
+        "SMED / QCO",
+        "Process mapping",
+        "Training design"
       ],
       "result": {
-        "value": "TODO",
-        "label": "TODO: changeover time saved"
+        "value": "F1",
+        "label": "pit-stop logic applied to a sewing line"
       },
-      "problem": "Line changeovers and unclear escalation paths caused avoidable downtime.",
-      "approach": "Measured the effectiveness of quick-changeover activities and designed a new problem escalation map for the floor.",
-      "outcome": "TODO: what improved after the new escalation map.",
+      "problem": "Every time a sewing line changed to a new style, production stopped while machines were adjusted, operators were trained and materials were prepared. Long changeovers meant lost output, a slow learning curve and late deliveries, and the steps were owned by many departments with no shared plan.",
+      "approach": "I had worked in operations for the Formula 1 Vietnam Grand Prix, and a pit stop is the perfect changeover: the car stops for only a few seconds because everything that can be prepared is done before it arrives, every crew member has one task, and the sequence is rehearsed. I applied the same logic to the line. Everything that can be done while the old style is still running (external activities) was moved before the stop, and every step got an owner and a deadline: technical allocation 7 days ahead, machine layout handover 7 days ahead, pre-set cut kits, operator training outside the line, machines adjusted and tested off-line, then threading, patterns, trims cards and packing method ready one day before. A QCO board tracks the status of each step, and a first-bundle quality meeting closes the loop. I packaged this into a training workshop with F1 pit-stop videos, team games and a quiz.",
+      "outcome": "The plant got one standard QCO process from style analysis to the first good piece, with clear owners and lead times for 9 preparation and 8 follow-up steps, and clear ramp-up targets: 50% line efficiency within 3 days for bras and 2 days for panties.",
       "recommendations": [
-        "TODO"
+        "Track changeover time and ramp-up efficiency per style on the QCO board.",
+        "Review the steps that most often finish late and move them earlier."
       ],
-      "reflection": "TODO",
+      "reflection": "The best ideas sometimes come from far away. A pit crew and a sewing line look nothing alike, but both win by preparing outside the stop and giving everyone one clear job.",
       "next": [
-        "TODO"
+        "Measure changeover time before and after the new process."
       ],
       "skills": [
         "lean",
         "process",
-        "production"
-      ]
+        "production",
+        "pm"
+      ],
+      "gallery": [
+        {
+          "src": "assets/projects/qco/1-what-why-how.jpg",
+          "title": "What, why, how",
+          "text": "QCO is the time from the last good piece of one style to the first good piece of the next, and a lean problem-solving tool."
+        },
+        {
+          "src": "assets/projects/qco/2-process-flow.jpg",
+          "title": "The QCO process",
+          "text": "Style analysis meeting → pre-production meeting → QCO meeting → changeover."
+        },
+        {
+          "src": "assets/projects/qco/3-preparation.jpg",
+          "title": "9 preparation steps",
+          "text": "Each step has an owner and a lead time, like a pit crew: from technical allocation 7 days ahead to measurement readiness 1 day ahead."
+        },
+        {
+          "src": "assets/projects/qco/4-follow-up.jpg",
+          "title": "8 follow-up steps",
+          "text": "The final checks one day before the changeover: patterns, trims cards, cut work, machine readiness, packing method."
+        },
+        {
+          "src": "assets/projects/qco/5-targets.jpg",
+          "title": "Targets",
+          "text": "Ramp-up targets after the changeover by product type."
+        }
+      ],
+      "galleryTitle": "Workshop slides",
+      "galleryCols": 2
     },
     {
       "id": "ai-risk",
-      "title": "AI support in project risk management",
-      "org": "TU Darmstadt · Master's project",
-      "period": "2025",
+      "title": "AI-augmented project risk management",
+      "org": "TU Darmstadt · Master's project with a global pharmaceutical company",
+      "period": "2025–2026",
       "type": "Academic",
       "hue": 3,
-      "role": "TODO",
+      "role": "",
       "tools": [
-        "TODO: tools"
+        "Microsoft 365",
+        "SharePoint",
+        "Power Automate",
+        "Dataverse",
+        "Copilot",
+        "Power BI",
+        "Prototyping"
       ],
       "result": {
-        "value": "AI",
-        "label": "applied to risk identification"
+        "value": "1",
+        "label": "central database for risks & lessons learned"
       },
-      "problem": "Project risks are often spotted too late. How can AI tools support identification and assessment?",
-      "approach": "TODO: literature review, framework or prototype?",
-      "outcome": "TODO: main findings.",
+      "problem": "A global pharmaceutical company had a formal risk management process, but every project kept its risks in its own Excel file. With no central database, project managers relied on personal memory to find similar past projects, and lessons learned were rarely reused. Management also had concerns about AI: data quality, compliance, explainability and accountability.",
+      "approach": "Interviewed company experts to map pain points, combined the findings with literature and case studies, and designed a framework on the Microsoft 365 tools the company already uses. We built wireframes and then high-fidelity prototypes so stakeholders could test the user experience before any development.",
+      "outcome": "Main findings: (1) A unified, project-centric database is the precondition for AI: each project starts from structured descriptions (formulation, supplier, regulation, packaging, capacity), which link to risks, mitigations and lessons. (2) AI adds most value in retrieval: semantic search finds risks from similar past projects, for example the same supplier or country, and shows them in the familiar risk-register format. (3) AI should augment, not replace: a Copilot assistant and Power BI dashboards support analysis, while project managers stay accountable for decisions. (4) A phased rollout on existing tools keeps disruption, cost and compliance risk low.",
       "recommendations": [
-        "TODO"
+        "Start with the central database and data-quality rules before adding AI features.",
+        "Pilot with one project portfolio, then scale.",
+        "Keep a human in the loop for every risk rating and mitigation."
       ],
-      "reflection": "TODO",
+      "reflection": "The hardest part of an AI project is not the AI: it is getting messy, scattered data into one structure people trust.",
       "next": [
-        "TODO"
+        "Connect external AI services once data quality is proven.",
+        "Add predictive risk scoring based on past project outcomes."
       ],
       "skills": [
+        "ai",
         "pm",
-        "ai"
-      ]
+        "data",
+        "stakeholder"
+      ],
+      "gallery": [
+        {
+          "src": "assets/projects/ai-risk/1-project-overview.png",
+          "title": "1 · Project overview",
+          "text": "Register a new project or upload an existing description."
+        },
+        {
+          "src": "assets/projects/ai-risk/2-project-description.png",
+          "title": "2 · Project description by category",
+          "text": "Structured inputs per category, with an assistant that spots links to past projects."
+        },
+        {
+          "src": "assets/projects/ai-risk/3-risk-assessment.png",
+          "title": "3 · Matched historical risks",
+          "text": "Risks from similar past projects, in the familiar risk-register format, ready to customise or add."
+        },
+        {
+          "src": "assets/projects/ai-risk/4-risk-dashboard.png",
+          "title": "4 · Risk dashboard",
+          "text": "Overall risk, rating breakdown, heat map and risk by category."
+        },
+        {
+          "src": "assets/projects/ai-risk/5-ai-assistant.png",
+          "title": "5 · AI assistant",
+          "text": "Ask questions such as \"Have we seen similar supplier risks before?\" and get answers from past projects."
+        },
+        {
+          "src": "assets/projects/ai-risk/6-platform-flow.png",
+          "title": "6 · Platform flow",
+          "text": "Excel and Word files flow through SharePoint and Power Automate into the database, then to Copilot and Power BI."
+        }
+      ],
+      "galleryTitle": "Prototype",
+      "galleryNote": "Prototype screens; company branding replaced with a placeholder.",
+      "galleryCols": 2
     },
     {
       "id": "freight-wagon",
-      "title": "Intelligent freight wagon: data for sustainable rail transport",
+      "title": "Intelligent freight wagons and sustainable rail transport",
       "org": "TU Darmstadt · Master's project",
       "period": "2025",
       "type": "Academic",
       "hue": 5,
-      "role": "TODO: your role",
+      "role": "",
       "tools": [
-        "TODO: tools"
+        "Systematic literature review",
+        "PRISMA 2020"
       ],
       "result": {
-        "value": "TODO",
-        "label": "TODO: key result"
+        "value": "27",
+        "label": "studies reviewed"
       },
-      "problem": "How can data collected from freight wagons (location, condition, load) support more sustainable and reliable rail freight?",
-      "approach": "TODO: what you analysed or designed (data types, use cases, framework).",
-      "outcome": "TODO: main findings.",
+      "problem": "Rail is one of the greenest ways to move freight, but European rail freight still loses to road on reliability and cost. Sensors, telematics and data platforms can turn wagons into \"intelligent\" assets. How does that data contribute to sustainability, how can it scale in Europe, and how does it change maintenance?",
+      "approach": "Systematic literature review following PRISMA 2020: 358 papers from Web of Science and Springer Nature, screened with clear inclusion criteria (2012–2025, Q1/Q2 journals) down to 27 studies, analysed along three research questions.",
+      "outcome": "Main findings: (1) Wagon data improves all three sustainability dimensions: economically through real-time visibility, condition monitoring and lower maintenance cost; socially through fewer manual inspections and safer work; environmentally through energy-efficient operation and more reliable service that supports the shift from road to rail. (2) Four levers can scale it across Europe: retrofitting traction and energy-harvesting technology, telematics and on-board sensing, automated identification at yards and borders, and shared data platforms across the multimodal chain. (3) Data moves maintenance from fixed intervals to condition-based and predictive models, reducing downtime, waste and cost.",
       "recommendations": [
-        "TODO"
+        "Retrofit existing fleets instead of replacing them.",
+        "Agree on shared data standards so wagon data can flow across operators and modes."
       ],
-      "reflection": "TODO",
+      "reflection": "Sustainability and efficiency usually point in the same direction once you have the data to see it.",
       "next": [
-        "TODO"
+        "Quantify the cost and CO₂ effects in real pilot data."
       ],
       "skills": [
-        "data"
+        "data",
+        "process"
       ]
     },
     {
       "id": "digital-workshop",
-      "title": "Digitalization workshop for daily operations",
+      "title": "Digital tools workshop for a garment plant",
       "org": "Crystal Martin Vietnam",
       "period": "2024",
       "type": "Work",
       "hue": 2,
-      "role": "Workshop designer & host",
+      "role": "",
       "tools": [
-        "Microsoft 365",
-        "Automation"
+        "Excel VBA",
+        "Power Query",
+        "Power BI",
+        "Power Automate",
+        "AI tools",
+        "RPA / OCR"
       ],
       "result": {
-        "value": "TODO",
-        "label": "TODO: participants"
+        "value": "6",
+        "label": "digital tools showcased"
       },
-      "problem": "Many daily reporting tasks were manual and repetitive.",
-      "approach": "Designed and ran an introductory workshop on automating everyday work with the Microsoft ecosystem. TODO: tools shown.",
-      "outcome": "TODO: participants and what they automated.",
+      "problem": "Many daily reports and planning tasks at the plant were manual and repetitive, and teams did not know which digital tools were already available to them.",
+      "approach": "A half-day workshop as part of the plant's digitalisation project: an introduction to all tools, hands-on booths for Excel VBA & Power Query, Power BI, Power Automate, AI tools and an RPA/OCR vendor, a mini game, a cyber-security briefing and an open Q&A with experts.",
+      "outcome": "Teams across planning and project functions saw how their own routine tasks could be automated with tools they already had, and identified first use cases to digitalise.",
       "recommendations": [
-        "TODO"
+        "Follow up with small pilot automations per department."
       ],
-      "reflection": "TODO",
+      "reflection": "People adopt tools they have touched themselves; booths beat slides.",
       "next": [
-        "TODO"
+        "TODO: number of participants and first automations"
       ],
       "skills": [
         "excel",
-        "powerpoint",
-        "ai"
+        "powerbi",
+        "ai",
+        "pm"
       ]
     }
   ]
