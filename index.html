@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Linh Vu · Supply Chain Portfolio</title>
-  <meta name="description" content="Linh Vu – supply chain, operations and analytics portfolio. MSc Logistics & Supply Chain Management, TU Darmstadt.">
+  <title>Linh Vu · Supply Chain Analyst</title>
+  <meta name="description" content="Linh Vu – Supply Chain Analyst. MSc Logistics & Supply Chain Management, TU Darmstadt. Projects, experience and education.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -12,9 +12,8 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23B76E79'/><stop offset='1' stop-color='%23E3B5A4'/></linearGradient></defs><rect width='64' height='64' rx='16' fill='url(%23g)'/><text x='50%' y='58%' text-anchor='middle' font-family='Georgia' font-size='30' fill='white'>LV</text></svg>">
 </head>
 <body>
-  <div id="preview-bar" hidden></div>
+  <div id="preview-bar" hidden><strong>Preview</strong><span class="hint">Yellow = missing info, hidden on the public site</span></div>
 
-  <!-- Cover + identity -->
   <header class="cover">
     <div class="cover-art" aria-hidden="true">
       <span class="chev">&rsaquo;&rsaquo;&rsaquo;&rsaquo;</span>
@@ -28,42 +27,35 @@
   </header>
 
   <section class="wrap identity">
-    <div class="avatar" id="avatar">LV</div>
+    <img class="avatar" id="avatar" alt="Portrait of Linh Vu">
     <div class="identity-text">
-      <h1 id="name"></h1>
+      <h1 id="headline"></h1>
       <p class="muted"><span class="dot dot-live"></span><span id="availability"></span> · <span id="location"></span></p>
+      <div class="contact-inline" id="contact-inline"></div>
     </div>
-    <div class="link-pills" id="link-pills"></div>
   </section>
 
-  <!-- Tabs -->
   <nav class="tabs-bar">
-    <div class="wrap tabs" id="tabs" role="tablist">
+    <div class="wrap tabs" id="tabs">
       <a href="#overview" data-tab="overview">Overview</a>
-      <a href="#work" data-tab="work">Case Studies</a>
-      <a href="#story" data-tab="story">My Story</a>
-      <a href="#skills" data-tab="skills">Skills</a>
+      <a href="#education" data-tab="education">Education</a>
       <a href="#experience" data-tab="experience">Experience</a>
-      <a href="#contact" data-tab="contact">Contact</a>
+      <a href="#projects" data-tab="projects">Projects</a>
+      <a href="#about" data-tab="about">About me</a>
     </div>
   </nav>
 
   <main class="wrap">
-    <!-- OVERVIEW -->
     <section class="panel" id="panel-overview">
       <div class="about" id="about"></div>
-      <div class="metrics" id="metrics"></div>
-
       <h2 class="h2">Where I learned &amp; worked</h2>
       <div class="logos" id="logos"></div>
-
       <div class="row-head">
-        <h2 class="h2">Featured case studies</h2>
-        <a href="#work" class="link-more">See all &rarr;</a>
+        <h2 class="h2">Featured projects</h2>
+        <a href="#projects" class="link-more">All projects &rarr;</a>
       </div>
       <div class="gallery" id="featured"></div>
-
-      <a href="#story" class="story-teaser reveal">
+      <a href="#about/story" class="story-teaser reveal">
         <span class="eyebrow">My story</span>
         <strong id="story-teaser-title"></strong>
         <span class="muted" id="story-teaser-intro"></span>
@@ -71,55 +63,69 @@
       </a>
     </section>
 
-    <!-- CASE STUDIES -->
-    <section class="panel" id="panel-work" hidden>
-      <h2 class="h2">Personal projects &amp; case studies</h2>
-      <div class="filters" id="filters"></div>
-      <div class="gallery" id="gallery"></div>
+    <section class="panel" id="panel-education" hidden>
+      <h2 class="h2">Education</h2>
+      <div class="entries" id="education-list"></div>
+      <div class="two-col">
+        <div><h3 class="sub">Certificates</h3><div id="certificates"></div></div>
+        <div><h3 class="sub">Languages</h3><div id="languages"></div></div>
+      </div>
     </section>
 
-    <!-- CASE DETAIL -->
-    <section class="panel" id="panel-case" hidden>
+    <section class="panel" id="panel-experience" hidden>
+      <h2 class="h2">Experience</h2>
+      <div class="entries" id="experience-list"></div>
+    </section>
+
+    <section class="panel" id="panel-projects" hidden>
+      <h2 class="h2">Projects</h2>
+      <div class="filters" id="filters"></div>
+      <div class="projects-layout">
+        <div>
+          <p class="filter-note" id="filter-note"></p>
+          <div class="gallery gallery-2" id="gallery"></div>
+        </div>
+        <aside class="skill-rail" id="skill-rail" aria-label="Filter projects by skill"></aside>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-project" hidden>
       <nav class="crumbs" id="crumbs"></nav>
       <article class="case" id="case"></article>
     </section>
 
-    <!-- STORY -->
-    <section class="panel" id="panel-story" hidden>
-      <div class="story-head">
-        <span class="eyebrow">My story</span>
-        <h2 class="h1" id="story-title"></h2>
-        <p class="lead" id="story-intro"></p>
+    <section class="panel" id="panel-about" hidden>
+      <div class="subtabs about-tabs" id="about-tabs">
+        <a href="#about/hobbies" data-sub="hobbies">Hobbies</a>
+        <a href="#about/story" data-sub="story">My story</a>
+        <a href="#about/contact" data-sub="contact">Contact</a>
       </div>
-      <ol class="chapters" id="chapters"></ol>
-      <div class="takeaways">
-        <h3>What I bring back to supply chain</h3>
-        <div class="chips" id="takeaways"></div>
+
+      <div class="about-pane" id="pane-hobbies">
+        <h2 class="h2">Outside of work</h2>
+        <div class="hobbies" id="hobbies"></div>
       </div>
-    </section>
 
-    <!-- SKILLS -->
-    <section class="panel" id="panel-skills" hidden>
-      <h2 class="h2">Skills</h2>
-      <div class="subtabs" id="skill-tabs"></div>
-      <div class="skill-grid" id="skill-grid"></div>
-    </section>
+      <div class="about-pane" id="pane-story" hidden>
+        <div class="story-head">
+          <span class="eyebrow">My story</span>
+          <h2 class="h1" id="story-title"></h2>
+          <p class="lead" id="story-intro"></p>
+        </div>
+        <ol class="chapters" id="chapters"></ol>
+        <div class="takeaways">
+          <h3>What I bring to supply chain</h3>
+          <div class="chips" id="takeaways"></div>
+        </div>
+      </div>
 
-    <!-- EXPERIENCE -->
-    <section class="panel" id="panel-experience" hidden>
-      <h2 class="h2">Experience</h2>
-      <ol class="timeline" id="timeline"></ol>
-      <h2 class="h2">Education</h2>
-      <div class="edu-grid" id="education"></div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="panel" id="panel-contact" hidden>
-      <h2 class="h2">Contact</h2>
-      <div class="contact-list" id="contact-list"></div>
-      <div class="contact-cta">
-        <h3>Let's talk supply chain.</h3>
-        <p id="contact-line"></p>
+      <div class="about-pane" id="pane-contact" hidden>
+        <h2 class="h2">Contact</h2>
+        <div class="contact-list" id="contact-list"></div>
+        <div class="contact-cta">
+          <h3>Let's talk supply chain.</h3>
+          <p id="contact-line"></p>
+        </div>
       </div>
     </section>
   </main>

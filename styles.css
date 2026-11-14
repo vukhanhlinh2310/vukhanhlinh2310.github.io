@@ -45,7 +45,7 @@ h1, h2, h3, h4 { font-family: "Fraunces", Georgia, serif; font-weight: 600; line
 
 /* ---------- Identity ---------- */
 .identity { display: grid; grid-template-columns: auto 1fr; gap: 0 24px; align-items: end; margin-top: -64px; position: relative; z-index: 2; }
-.avatar { width: 132px; height: 132px; border-radius: 26px; display: grid; place-items: center; font-family: "Fraunces", serif; font-size: 2.6rem; color: #fff; background: var(--gold-grad); background-size: cover; background-position: center; border: 5px solid var(--cream); box-shadow: var(--shadow); }
+.avatar { width: 156px; height: 156px; border-radius: 26px; display: grid; place-items: center; font-family: "Fraunces", serif; font-size: 2.6rem; color: #fff; background: var(--gold-grad); background-size: cover; background-position: center; border: 5px solid var(--cream); box-shadow: var(--shadow); }
 .identity-text h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
 .identity-text p { font-size: .92rem; font-weight: 600; display: flex; align-items: center; gap: .45rem; flex-wrap: wrap; }
 .link-pills { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; margin-top: 26px; }
@@ -249,4 +249,117 @@ body.preview .tabs-bar { top: 46px; }
   .logos { grid-template-columns: repeat(2, 1fr); }
   .case-hero { aspect-ratio: 16 / 9; }
   .footer { flex-direction: column; gap: 4px; }
+}
+
+/* =========================================================
+   v3 layout: photo header, entries, project skill rail, about
+   ========================================================= */
+img.avatar { object-fit: cover; padding: 0; background: var(--rose-100); }
+.identity { align-items: center; }
+.identity-text { padding-top: 70px; }
+.contact-inline { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 12px; }
+.contact-inline a { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: .9rem; color: var(--ink); padding: 6px 12px 6px 6px; border-radius: 999px; background: #fff; border: 1px solid var(--line); transition: border-color .2s, transform .2s; }
+.contact-inline a:hover { border-color: var(--rose-300); transform: translateY(-2px); }
+.contact-inline img { width: 24px; height: 24px; object-fit: contain; }
+
+/* logo strip with two links */
+.logos { grid-template-columns: repeat(5, 1fr); }
+.logo-card { gap: 6px; padding: 18px 12px 16px; }
+.logo-card .logo-img { height: 64px; width: 100%; display: grid; place-items: center; margin-bottom: 6px; }
+.logo-card .logo-img img { max-height: 60px; max-width: 86%; object-fit: contain; }
+.logo-name { font-weight: 700; font-size: .86rem; line-height: 1.25; }
+.logo-name:hover { color: var(--rose-700); }
+.logo-name span { font-size: .75rem; color: var(--rose-400); }
+.logo-sub { font-size: .76rem; font-weight: 700; color: var(--rose-700); background: var(--rose-50); border: 1px solid var(--rose-100); padding: .25rem .65rem; border-radius: 999px; transition: background .2s, color .2s; }
+.logo-sub:hover { background: var(--gold-grad); color: #fff; border-color: transparent; }
+
+/* education / experience entries */
+.entries { display: grid; gap: 18px; }
+.entry { background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 26px 28px; transition: box-shadow .3s, border-color .3s; scroll-margin-top: 90px; }
+.entry.flash { border-color: var(--rose-400); box-shadow: 0 0 0 4px var(--rose-100), var(--shadow); }
+.entry-head { display: grid; grid-template-columns: 84px 1fr auto; gap: 18px; align-items: center; margin-bottom: 14px; }
+.entry-logo { width: 84px; height: 64px; border-radius: 14px; border: 1px solid var(--line); display: grid; place-items: center; padding: 8px; background: #fff; }
+.entry-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.entry-head h3 { font-size: 1.3rem; }
+.entry-org { font-size: .9rem; color: var(--muted); margin-top: 2px; }
+.entry-org a { font-weight: 700; color: var(--rose-700); }
+.entry-period { text-align: right; font-weight: 700; font-size: .88rem; color: var(--rose-700); white-space: nowrap; }
+.entry-period small { display: block; font-weight: 500; color: var(--muted); font-size: .8rem; }
+.entry-text { color: #4a3b40; }
+.entry h4 { font-family: "Manrope", sans-serif; font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--rose-500); margin: 16px 0 8px; }
+.entry-points, .entry-projects { padding-left: 1.15rem; display: grid; gap: .45rem; font-size: .95rem; color: #4a3b40; }
+.entry-points b { color: var(--ink); }
+.entry-points li::marker, .entry-projects li::marker { color: var(--rose-400); }
+.entry-projects a { color: var(--rose-700); font-weight: 600; }
+.entry-projects a:hover { text-decoration: underline; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 28px; }
+.sub { font-size: 1.35rem; margin-bottom: 14px; }
+.edu { margin-bottom: 10px; }
+.lang { margin-bottom: 18px; }
+.lang-top { display: flex; justify-content: space-between; font-size: .92rem; margin-bottom: 6px; }
+.lang-top span { color: var(--muted); }
+.bar { height: 8px; border-radius: 999px; background: var(--rose-100); overflow: hidden; }
+.bar i { display: block; height: 100%; border-radius: inherit; background: var(--gold-grad); }
+
+/* projects: type tabs + right skill rail */
+.filters a { font-weight: 700; font-size: .86rem; padding: .5rem 1rem; border-radius: 999px; border: 1.5px solid var(--line); background: #fff; color: var(--muted); transition: all .2s; }
+.filters a.active { background: var(--gold-grad); border-color: transparent; color: #fff; }
+.projects-layout { display: grid; grid-template-columns: 1fr 260px; gap: 24px; align-items: start; }
+.gallery-2 { grid-template-columns: repeat(2, 1fr); }
+.filter-note { font-size: .9rem; color: var(--muted); margin-bottom: 12px; }
+.filter-note:empty { display: none; }
+.filter-note button { font: inherit; border: none; background: none; color: var(--rose-700); font-weight: 700; cursor: pointer; text-decoration: underline; }
+.skill-rail { position: sticky; top: 72px; background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 16px 12px; display: grid; gap: 4px; max-height: calc(100vh - 96px); overflow-y: auto; }
+body.preview .skill-rail { top: 118px; }
+.skill-rail h3 { font-size: 1.1rem; padding: 0 8px 8px; }
+.skill-rail button { font: inherit; cursor: pointer; display: grid; grid-template-columns: 28px 1fr auto; align-items: center; gap: 10px; text-align: left; padding: 8px; border-radius: 12px; border: 1px solid transparent; background: none; font-size: .86rem; font-weight: 600; color: var(--ink); transition: background .2s, border-color .2s; }
+.skill-rail button:first-of-type { grid-template-columns: 1fr auto; }
+.skill-rail button:hover { background: var(--rose-50); }
+.skill-rail button.active { background: var(--rose-100); border-color: var(--rose-300); }
+.skill-rail img, .case-skills img { width: 28px; height: 28px; object-fit: contain; }
+.skill-rail i, .case-skills i { width: 28px; height: 28px; border-radius: 8px; display: grid; place-items: center; font-style: normal; font-family: "Fraunces", serif; font-size: .78rem; color: #fff; background: var(--gold-grad); }
+.skill-rail em { font-style: normal; font-size: .74rem; font-weight: 700; color: var(--rose-700); background: var(--rose-50); border-radius: 999px; padding: .1rem .5rem; }
+.card-skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: auto; padding-top: 8px; }
+.card-skills span { font-size: .72rem; font-weight: 600; color: var(--rose-700); background: var(--rose-50); border-radius: 999px; padding: .15rem .55rem; }
+.case-skills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.case-skills button { font: inherit; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; padding: 5px 12px 5px 5px; border-radius: 999px; border: 1px solid var(--line); background: #fff; font-size: .84rem; font-weight: 600; transition: border-color .2s, transform .2s; }
+.case-skills button:hover { border-color: var(--rose-300); transform: translateY(-2px); }
+.case-skills i, .case-skills img { width: 24px; height: 24px; }
+
+/* about me */
+.about-tabs { display: flex; gap: 8px; margin: 36px 0 0; }
+.about-tabs a { font-weight: 700; font-size: .88rem; padding: .55rem 1.1rem; border-radius: 999px; border: 1.5px solid var(--line); background: #fff; color: var(--muted); transition: all .2s; }
+.about-tabs a.active { background: var(--gold-grad); border-color: transparent; color: #fff; }
+.hobbies { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.hobby { background: #fff; border: 1px solid var(--line); border-radius: 22px; overflow: hidden; transition: transform .25s, box-shadow .25s; }
+.hobby:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.hobby-photos { display: grid; gap: 3px; height: 300px; grid-template-rows: minmax(0, 1fr); overflow: hidden; }
+.hobby-photos.n2 { grid-template-columns: 1.3fr 1fr; }
+.hobby-photos img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
+.hobby:hover .hobby-photos img { transform: scale(1.04); }
+.hobby-text { padding: 18px 22px 22px; }
+.hobby-text h3 { font-size: 1.3rem; margin-bottom: .35rem; }
+.hobby-text p { color: var(--muted); font-size: .95rem; }
+.contact-row .cr-left { display: inline-flex; align-items: center; gap: 12px; color: var(--ink); font-weight: 700; font-size: 1rem; }
+.contact-row img { width: 28px; height: 28px; object-fit: contain; }
+
+@media (max-width: 920px) {
+  .logos { grid-template-columns: repeat(3, 1fr); }
+  .projects-layout { grid-template-columns: 1fr; }
+  .skill-rail { position: static; order: -1; display: flex; overflow-x: auto; max-height: none; padding: 10px; border-radius: 16px; }
+  .skill-rail h3 { display: none; }
+  .skill-rail button { display: inline-flex; flex-shrink: 0; white-space: nowrap; gap: 6px; }
+  .skill-rail img, .skill-rail i { width: 22px; height: 22px; }
+}
+@media (max-width: 600px) {
+  .identity-text { padding-top: 0; }
+  .identity { align-items: start; }
+  .logos { grid-template-columns: repeat(2, 1fr); }
+  .gallery-2, .hobbies, .two-col { grid-template-columns: 1fr; }
+  .entry { padding: 20px; }
+  .entry-head { grid-template-columns: 64px 1fr; }
+  .entry-logo { width: 64px; height: 52px; }
+  .entry-period { grid-column: 1 / -1; text-align: left; }
+  .hobby-photos { height: 240px; }
+  .contact-inline a span { font-size: .82rem; }
 }
