@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Linh Vu · Supply Chain</title>
+  <meta name="description" content="Linh Vu – Supply chain, operations and analytics. MSc Logistics & Supply Chain Management, TU Darmstadt.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23B76E79'/><stop offset='1' stop-color='%23E3B5A4'/></linearGradient></defs><rect width='64' height='64' rx='16' fill='url(%23g)'/><text x='50%' y='58%' text-anchor='middle' font-family='Georgia' font-size='30' fill='white'>LV</text></svg>">
+</head>
+<body>
+  <div id="preview-bar" hidden></div>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="#top" class="logo" id="logo">LV</a>
+      <nav class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact" class="btn btn-small">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow" id="eyebrow"></p>
+          <h1 id="headline"></h1>
+          <p class="lead" id="summary"></p>
+          <div class="hero-actions">
+            <a href="#work" class="btn">See my work</a>
+            <a id="linkedin-btn" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <div class="avatar" id="avatar">LV</div>
+          <h2 id="name"></h2>
+          <p class="muted" id="degree"></p>
+          <ul class="facts">
+            <li><span class="dot"></span><span id="location"></span></li>
+            <li><span class="dot dot-live"></span><span id="availability"></span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="metrics wrap" id="metrics"></section>
+
+    <section class="section wrap" id="work">
+      <div class="section-head">
+        <p class="eyebrow">Selected work</p>
+        <h2>Case studies</h2>
+      </div>
+      <div class="projects" id="projects"></div>
+    </section>
+
+    <section class="section section-tint" id="skills">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Toolkit</p>
+          <h2>Skills</h2>
+        </div>
+        <div class="skills" id="skill-groups"></div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="experience">
+      <div class="section-head">
+        <p class="eyebrow">Path</p>
+        <h2>Experience</h2>
+      </div>
+      <ol class="timeline" id="timeline"></ol>
+
+      <div class="two-col">
+        <div>
+          <h3 class="sub">Education</h3>
+          <div id="education"></div>
+        </div>
+        <div>
+          <h3 class="sub">Languages</h3>
+          <div id="languages"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-inner">
+        <h2>Let's talk supply chain.</h2>
+        <p id="contact-line"></p>
+        <div class="hero-actions">
+          <a id="email-btn" class="btn btn-light">Email me</a>
+          <a id="linkedin-btn-2" class="btn btn-outline-light" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <span id="footer-name"></span>
+    <span class="muted">Built with care in Darmstadt</span>
+  </footer>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
