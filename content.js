@@ -336,12 +336,7 @@ const SITE = {
           "text": "Handled other operational tasks assigned by the manager."
         }
       ],
-      "projects": [
-        {
-          "text": "The pit-stop logic I saw here later became the idea behind my quick changeover project at Crystal Martin",
-          "link": "quick-changeover"
-        }
-      ]
+      "projects": []
     }
   ],
   "skills": [
