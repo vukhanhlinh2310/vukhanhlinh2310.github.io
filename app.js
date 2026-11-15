@@ -25,6 +25,8 @@
   const PALETTES = [["#B76E79", "#E9B9A8"], ["#9C5A66", "#DDA594"], ["#C98C7E", "#F1D2C2"], ["#A8606E", "#E7B3B8"], ["#8E4B57", "#D69A8E"], ["#C27D86", "#F0C7BA"]];
   let coverSeq = 0;
   function cover(p, wide) {
+    // Purpose: show the real project image as thumbnail on cards (the wide case hero keeps the generated art)
+    if (p.thumb && !wide) return `<img class="card-img" src="${esc(p.thumb)}" alt="" loading="lazy" style="object-position:${esc(p.thumbPos || "center")}">`;
     const [a, b] = PALETTES[p.hue % PALETTES.length];
     const w = wide ? 1200 : 640, h = wide ? 400 : 360, id = "g" + p.id + "-" + (++coverSeq);
     let bars = "";

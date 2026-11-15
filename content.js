@@ -86,7 +86,7 @@ const SITE = {
     }
   ],
   "featured": [
-    "honda-network",
+    "forecasting",
     "quick-changeover",
     "ai-risk"
   ],
@@ -497,6 +497,8 @@ const SITE = {
       "period": "2026 · submission Dec 2026",
       "type": "Academic",
       "hue": 1,
+      "thumb": "assets/projects/thesis/1-network.png",
+      "thumbPos": "center",
       "role": "Master's thesis",
       "tools": [
         "Python (pandas, statsmodels, XGBoost)",
@@ -665,6 +667,8 @@ const SITE = {
       "period": "2023",
       "type": "Work",
       "hue": 0,
+      "thumb": "assets/projects/honda/2-milk-run-network.jpg",
+      "thumbPos": "center",
       "role": "Inventory Control Intern · bachelor's thesis",
       "tools": [
         "SAP MM/SD",
@@ -757,6 +761,8 @@ const SITE = {
       "period": "2024–2026",
       "type": "Work",
       "hue": 3,
+      "thumb": "assets/projects/kpi-dashboard/1-dashboard.png",
+      "thumbPos": "top",
       "role": "Working Student, built and maintains the tool",
       "tools": [
         "Excel (SUMIFS, pivot tables, VBA)",
@@ -922,6 +928,8 @@ const SITE = {
       "period": "2023–2024",
       "type": "Work",
       "hue": 1,
+      "thumb": "assets/projects/qco/0-f1-pit-stop.jpg",
+      "thumbPos": "center",
       "role": "Management Trainee · designed and ran the workshop",
       "tools": [
         "SMED / QCO",
@@ -994,6 +1002,8 @@ const SITE = {
       "period": "2025–2026",
       "type": "Academic",
       "hue": 3,
+      "thumb": "assets/projects/ai-risk/4-risk-dashboard.png",
+      "thumbPos": "top",
       "role": "",
       "tools": [
         "Microsoft 365",
