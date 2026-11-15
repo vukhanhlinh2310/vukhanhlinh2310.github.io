@@ -86,7 +86,7 @@ const SITE = {
     }
   ],
   "featured": [
-    "honda-network",
+    "forecasting",
     "quick-changeover",
     "ai-risk"
   ],
@@ -541,7 +541,8 @@ const SITE = {
         "problem": "Retailers pick forecasting methods by accuracy, but for perishable products the direction of the error may cost more than its size.",
         "did": "Built a Python pipeline comparing six forecasting methods on real dairy sales, and a simulator of anticipatory shipping across a three-tier network.",
         "result": "A per-leg recommendation of which method minimises total cost. Final results with the submission in December 2026."
-      }
+      },
+      "thumb": "assets/thumbs/forecasting.jpg"
     },
     {
       "id": "schedule-adherence",
@@ -579,7 +580,8 @@ const SITE = {
         "problem": "A large-engine plant needs to know how reliable its start-of-line and ready-to-ship dates are, and which open orders to protect first.",
         "did": "Simulated 150 engine orders, measured adherence, ran a Pareto analysis of delay causes and built a priority score in Python.",
         "result": "RTS adherence of 73% against a 90% target; two causes drive 64% of all delay days."
-      }
+      },
+      "thumb": "assets/thumbs/schedule-adherence.jpg"
     },
     {
       "id": "sop-capacity",
@@ -618,7 +620,8 @@ const SITE = {
         "problem": "S&OP needs an early answer: can the plant build next year's demand plan, and where is the bottleneck?",
         "did": "Converted a 12-month demand plan into work-centre hours and tested a +15% demand scenario.",
         "result": "The test bench is the bottleneck: up to 96% loaded and over capacity in 7 months under the upside scenario."
-      }
+      },
+      "thumb": "assets/thumbs/sop-capacity.jpg"
     },
     {
       "id": "material-availability",
@@ -656,7 +659,8 @@ const SITE = {
         "problem": "One missing part stops an engine build, but extra stock ties up capital.",
         "did": "Classified 60 parts by ABC/XYZ, calculated safety stock and reorder points, and projected stock for critical parts.",
         "result": "21 parts need action now; one long-lead part would run out in week 8 without expediting."
-      }
+      },
+      "thumb": "assets/thumbs/material-availability.jpg"
     },
     {
       "id": "honda-network",
@@ -713,7 +717,8 @@ const SITE = {
         "problem": "Spare-part back-orders were released between Honda's northern and southern warehouses in many small, slow or expensive shipments.",
         "did": "Analysed back-order and release data in SAP, mapped the process and redesigned the north-to-south distribution flow (bachelor's thesis).",
         "result": "Proposed a daily milk-run model, estimated to cut the logistics cost of the process by 8.8%."
-      }
+      },
+      "thumb": "assets/thumbs/honda-network.jpg"
     },
     {
       "id": "binding-tape",
@@ -807,7 +812,8 @@ const SITE = {
         "problem": "Account openings and balances for a banking product were counted manually each week.",
         "did": "Built an Excel dashboard on a weekly database with year/week selectors, year-on-year comparison and charts.",
         "result": "One weekly report replaced manual counting. Screenshots use simulated data."
-      }
+      },
+      "thumb": "assets/thumbs/kpi-dashboard.jpg"
     },
     {
       "id": "product-launch",
@@ -985,7 +991,8 @@ const SITE = {
         "problem": "Style changeovers on sewing lines stopped production for too long, with no shared plan or escalation path.",
         "did": "Applied Formula 1 pit-stop logic: moved preparation before the stop, gave every step an owner and a deadline, and designed an escalation map and a training workshop.",
         "result": "One standard QCO process with 17 owned steps and clear ramp-up targets."
-      }
+      },
+      "thumb": "assets/thumbs/quick-changeover.jpg"
     },
     {
       "id": "ai-risk",
@@ -1062,7 +1069,8 @@ const SITE = {
         "problem": "A global pharmaceutical company kept project risks in scattered Excel files, so past lessons were rarely reused.",
         "did": "Interviewed experts and designed an AI-augmented risk and lessons-learned platform on Microsoft 365, with prototypes.",
         "result": "A phased framework where AI retrieves similar past risks and project managers stay accountable."
-      }
+      },
+      "thumb": "assets/thumbs/ai-risk.jpg"
     },
     {
       "id": "freight-wagon",

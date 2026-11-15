@@ -73,7 +73,7 @@
   const card = (p) => {
     const res = show(p.result.value) ? `<span class="big">${txt(p.result.value)}</span>` : "";
     return `<a class="card reveal" href="#project/${p.id}">
-      <div class="card-cover">${cover(p)}<span class="badge">${esc(p.type)} · ${esc(p.period)}</span>${res}</div>
+      <div class="card-cover${p.thumb ? " has-thumb" : ""}">${p.thumb ? `<img src="${esc(p.thumb)}" alt="" loading="lazy">` : cover(p)}<span class="badge">${esc(p.type)} · ${esc(p.period)}</span>${res}</div>
       <div class="card-body"><h3>${esc(p.title)}</h3><span class="org">${esc(p.org)}</span>
       <span class="card-skills">${p.skills.map((k) => skillById[k] ? `<span>${esc(skillById[k].name)}</span>` : "").join("")}</span></div></a>`;
   };
