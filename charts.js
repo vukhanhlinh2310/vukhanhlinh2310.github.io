@@ -5,7 +5,7 @@ window.renderPractice = function (el, data) {
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const hasChart = typeof Chart !== "undefined";
   if (hasChart) {
-    Chart.defaults.font.family = "Manrope, system-ui, sans-serif";
+    Chart.defaults.font.family = "Montserrat, system-ui, sans-serif";
     Chart.defaults.color = C.muted;
     Chart.defaults.plugins.legend.labels.usePointStyle = true;
     Chart.defaults.plugins.legend.labels.boxWidth = 8;

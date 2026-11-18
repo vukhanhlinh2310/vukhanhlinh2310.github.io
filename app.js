@@ -13,7 +13,7 @@
     if (!preview) return esc(before);
     return (before ? esc(before) + " " : "") + '<mark class="todo">' + esc(s.slice(s.indexOf("TODO"))) + "</mark>";
   }
-  const ready = (p) => preview || (show(p.outcome) && [p.problem, p.approach].filter(show).length >= 1);
+  const ready = (p) => !p.hidden && (preview || (show(p.outcome) && [p.problem, p.approach].filter(show).length >= 1));
 
   /* ---------- Reveal on scroll ---------- */
   const io = new IntersectionObserver((es) => es.forEach((en) => {
@@ -112,7 +112,7 @@
   const typeOf = { work: "Work", academic: "Academic", personal: "Personal project" };
   let fType = "all", fSkill = null;
   function renderProjects() {
-    $("filters").innerHTML = TYPES.map(([k, l]) => `<a href="#projects/${k}" class="${k === fType ? "active" : ""}">${esc(l)}</a>`).join("");
+    $("filters").innerHTML = TYPES.filter(([k]) => k === "all" || visible.some((p) => p.type === typeOf[k])).map(([k, l]) => `<a href="#projects/${k}" class="${k === fType ? "active" : ""}">${esc(l)}</a>`).join("");
     const inType = visible.filter((p) => fType === "all" || p.type === typeOf[fType]);
     const counts = Object.fromEntries(SITE.skills.map((s) => [s.id, inType.filter((p) => p.skills.includes(s.id)).length]));
     $("skill-rail").innerHTML = `<h3>Skills</h3><button class="${!fSkill ? "active" : ""}" data-skill="">All skills <em>${inType.length}</em></button>` +

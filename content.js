@@ -581,7 +581,8 @@ const SITE = {
         "did": "Simulated 150 engine orders, measured adherence, ran a Pareto analysis of delay causes and built a priority score in Python.",
         "result": "RTS adherence of 73% against a 90% target; two causes drive 64% of all delay days."
       },
-      "thumb": "assets/thumbs/schedule-adherence.jpg"
+      "thumb": "assets/thumbs/schedule-adherence.jpg",
+      "hidden": true
     },
     {
       "id": "sop-capacity",
@@ -621,7 +622,8 @@ const SITE = {
         "did": "Converted a 12-month demand plan into work-centre hours and tested a +15% demand scenario.",
         "result": "The test bench is the bottleneck: up to 96% loaded and over capacity in 7 months under the upside scenario."
       },
-      "thumb": "assets/thumbs/sop-capacity.jpg"
+      "thumb": "assets/thumbs/sop-capacity.jpg",
+      "hidden": true
     },
     {
       "id": "material-availability",
@@ -660,7 +662,8 @@ const SITE = {
         "did": "Classified 60 parts by ABC/XYZ, calculated safety stock and reorder points, and projected stock for critical parts.",
         "result": "21 parts need action now; one long-lead part would run out in week 8 without expediting."
       },
-      "thumb": "assets/thumbs/material-availability.jpg"
+      "thumb": "assets/thumbs/material-availability.jpg",
+      "hidden": true
     },
     {
       "id": "honda-network",
